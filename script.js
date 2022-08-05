@@ -24,6 +24,7 @@ const squareTwo = document.querySelector(".two");
 const squareThree = document.querySelector(".three");
 const squareFour = document.querySelector(".four");
 const enterButton = document.querySelector(".enter");
+const backspaceBtn = document.querySelector(".backspace");
 
 let letters = [];
 let count = 0;
@@ -43,7 +44,6 @@ const counter = () => {
 }
 
 const displayClickedLetter = () => {
-    
     if(count == 0) {
         squaresOfRowOne[0].innerHTML = letters[0];
         
@@ -59,8 +59,39 @@ const displayClickedLetter = () => {
     }
 }
 
+const deleteDisplayedLetter = () => {
+   if(count == 4) {
+    squaresOfRowOne[3].innerHTML = "";
+    letters.pop();
+    count = count - 1;
+    console.log(letters);
+   }else if(count == 3) {
+    squaresOfRowOne[2].innerHTML = "";
+    letters.pop();
+    count = count - 1;
+    console.log(letters);
+   }else if(count == 2) {
+    squaresOfRowOne[1].innerHTML = "";
+    letters.pop();
+    count = count - 1;
+    console.log(letters);
+   }else if(count == 1) {
+    squaresOfRowOne[0].innerHTML = "";
+    letters.pop();
+    count = count - 1;
+    console.log(letters);
+   }
+}
+
+backspaceBtn.addEventListener("click", () => {
+    deleteDisplayedLetter();
+    console.log(count);
+});
+
+
+
 const wordCheckerCorrect = () => {
-    
+
     let guessedWord = letters.toString().replaceAll(',','').toLowerCase();
     for(let i = 0; i < guessedWord.length; i++) {
         for(let j = 0; j < randomWord.length; j++) {
@@ -106,6 +137,8 @@ enterButton.addEventListener("click", () => {
     wordCheckerCorrect();
     wordCheckerIncorrect();
     wordCheckerLetterIncorrectIndex(); 
+    letters = [];
+    count2 = 0;
 });
 
 lettersBtn.forEach((letter) => {
