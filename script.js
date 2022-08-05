@@ -17,6 +17,14 @@
 //if all letters match then squares turn green
 
 
+const lettersBtn = document.querySelectorAll(".letter");
+const squaresOfRowOne = document.querySelectorAll(".square");
+const squareOne = document.querySelector(".one");
+const squareTwo = document.querySelector(".two");
+const squareThree = document.querySelector(".three");
+const squareFour = document.querySelector(".four");
+const enterButton = document.querySelector(".enter");
+
 
 
 
