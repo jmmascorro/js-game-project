@@ -25,6 +25,42 @@ const squareThree = document.querySelector(".three");
 const squareFour = document.querySelector(".four");
 const enterButton = document.querySelector(".enter");
 
+let letters = [];
+
+const createWord = (letter) => {
+    letter = letter.innerHTML;
+    letters.push(letter.toLowerCase());  
+}
+
+const counter = () => {
+    count = count + 1;
+}
+
+const displayClickedLetter = () => {
+    
+    if(count == 0) {
+        squaresOfRowOne[0].innerHTML = letters[0];
+        
+    }else if(count == 1) {
+        squaresOfRowOne[1].innerHTML = letters[1];
+        
+    }else if(count == 2) {
+        squaresOfRowOne[2].innerHTML =letters[2];
+       
+    }else if(count == 3){
+        squaresOfRowOne[3].innerHTML = letters[3]; 
+        
+    }
+}
+
+lettersBtn.forEach((letter) => {
+    letter.addEventListener("click", () => {
+        createWord(letter);
+        displayClickedLetter();
+        counter();
+    });
+});
+
 
 
 
