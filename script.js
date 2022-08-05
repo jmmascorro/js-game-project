@@ -18,11 +18,10 @@
 
 
 const lettersBtn = document.querySelectorAll(".letter");
-const squaresOfRowOne = document.querySelectorAll(".square");
-const squareOne = document.querySelector(".one");
-const squareTwo = document.querySelector(".two");
-const squareThree = document.querySelector(".three");
-const squareFour = document.querySelector(".four");
+const squaresOfRowOne = document.querySelectorAll(".row_one");
+const squaresOfRowTwo = document.querySelectorAll(".row_two");
+const squaresOfRowThree = document.querySelectorAll(".row_three");
+const squaresOfRowFour = document.querySelectorAll(".row_four");
 const enterButton = document.querySelector(".enter");
 const backspaceBtn = document.querySelector(".backspace");
 
@@ -40,23 +39,50 @@ const createWord = (letter) => {
 }
 
 const counter = () => {
-    count = count + 1;
+    count += 1;
 }
 
 const displayClickedLetter = () => {
-    if(count == 0) {
-        squaresOfRowOne[0].innerHTML = letters[0];
-        
-    }else if(count == 1) {
-        squaresOfRowOne[1].innerHTML = letters[1];
-        
-    }else if(count == 2) {
-        squaresOfRowOne[2].innerHTML =letters[2];
-       
-    }else if(count == 3){
-        squaresOfRowOne[3].innerHTML = letters[3]; 
-        
+    switch(count) {
+        case 0: 
+            squaresOfRowOne[0].innerHTML = letters[0];
+            break;
+        case 1:
+            squaresOfRowOne[1].innerHTML = letters[1];
+            break;
+        case 2:
+            squaresOfRowOne[2].innerHTML =letters[2];
+            break;
+        case 3:
+            squaresOfRowOne[3].innerHTML = letters[3]; 
+            break;
+        case 4:
+            squaresOfRowTwo[0].innerHTML = letters[0];
+            break;
+        case 5:
+            squaresOfRowTwo[1].innerHTML = letters[1];
+            break;
+        case 6:
+            squaresOfRowTwo[2].innerHTML = letters[2];
+            break;
+        case 7:
+            squaresOfRowTwo[3].innerHTML = letters[3];
+            break;  
     }
+        
+    // if(count == 0) {
+    //     squaresOfRowOne[0].innerHTML = letters[0];
+        
+    // }else if(count == 1) {
+    //     squaresOfRowOne[1].innerHTML = letters[1];
+        
+    // }else if(count == 2) {
+    //     squaresOfRowOne[2].innerHTML =letters[2];
+       
+    // }else if(count == 3){
+    //     squaresOfRowOne[3].innerHTML = letters[3]; 
+        
+    // }
 }
 
 const deleteDisplayedLetter = () => {
@@ -88,37 +114,11 @@ backspaceBtn.addEventListener("click", () => {
     console.log(count);
 });
 
-
-
-const wordCheckerCorrect = () => {
-
-    let guessedWord = letters.toString().replaceAll(',','').toLowerCase();
-    for(let i = 0; i < guessedWord.length; i++) {
-        for(let j = 0; j < randomWord.length; j++) {
-            if(guessedWord[i] == randomWord[i]) {
-                squaresOfRowOne[i].style.backgroundColor = "#66FF00";
-            }
-        }
-    }
-}
-      
-const wordCheckerIncorrect = () => {
-
-    let guessedWord = letters.toString().replaceAll(',','').toLowerCase();
-    for(let i = 0; i < guessedWord.length; i++) {
-         for(let j = 0; j < randomWord.length; j++) {
-            if(guessedWord[i] !== randomWord[i]) {
-                squaresOfRowOne[i].style.backgroundColor = 	"#C8C8C8";
-            }
-        }
-    }
-}
-
-const wordCheckerLetterIncorrectIndex = ()  => {
+const wordChecker = ()  => {
     
     let randomWord1 = randomWord.split('');
     for(let i = 0; i < letters.length; i++){
-        count2 = count2 + 1;
+        count2 += 1;
         for(let j = 0; j < randomWord.length; j++) {
             if(count2 == 1 && randomWord1.includes(letters[0]) && letters[i] !== randomWord1[i]) {
                 squaresOfRowOne[i].style.backgroundColor = 	"#FFAC1C";
@@ -128,17 +128,18 @@ const wordCheckerLetterIncorrectIndex = ()  => {
                 squaresOfRowOne[i].style.backgroundColor = 	"#FFAC1C";
             }else if(count2 == 4 && randomWord1.includes(letters[3]) && letters[i] !== randomWord1[i]) {
                 squaresOfRowOne[i].style.backgroundColor = 	"#FFAC1C";
+            }else if(letters[i] !== randomWord1[i]) {
+                squaresOfRowOne[i].style.backgroundColor = "#C8C8C8";
+            }else if(letters[i] == randomWord1[i]) {
+                squaresOfRowOne[i].style.backgroundColor = "#66FF00";
             }
         }
     }
 }
 
 enterButton.addEventListener("click", () => {
-    wordCheckerCorrect();
-    wordCheckerIncorrect();
-    wordCheckerLetterIncorrectIndex(); 
+    wordChecker(); 
     letters = [];
-    count2 = 0;
 });
 
 lettersBtn.forEach((letter) => {
