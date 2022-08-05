@@ -24,6 +24,7 @@ const squaresOfRowThree = document.querySelectorAll(".row_three");
 const squaresOfRowFour = document.querySelectorAll(".row_four");
 const enterButton = document.querySelector(".enter");
 const backspaceBtn = document.querySelector(".backspace");
+const winner = document.querySelector(".p_winner");
 
 let letters = [];
 let count = 0;
@@ -114,31 +115,40 @@ backspaceBtn.addEventListener("click", () => {
     console.log(count);
 });
 
-const wordChecker = ()  => {
-    
-    let randomWord1 = randomWord.split('');
-    for(let i = 0; i < letters.length; i++){
+const wordChecker = ()  => { 
+    let guessedWord = letters.toString().replaceAll(',','').toLowerCase();
+    for(let i = 0; i < guessedWord.length; i++){
         count2 += 1;
-        for(let j = 0; j < randomWord.length; j++) {
-            if(count2 == 1 && randomWord1.includes(letters[0]) && letters[i] !== randomWord1[i]) {
+        for(let j = 0; j < randomWord.length; j++) { 
+            if(count2 == 1 && randomWord.includes(guessedWord[0]) && guessedWord[i] !== randomWord[i]) {
                 squaresOfRowOne[i].style.backgroundColor = 	"#FFAC1C";
-            }else if(count2 == 2 && randomWord1.includes(letters[1]) && letters[i] !== randomWord1[i]) {
+            }else if(count2 == 2 && randomWord.includes(guessedWord[1]) && guessedWord[i] !== randomWord[i]) {
                 squaresOfRowOne[i].style.backgroundColor = 	"#FFAC1C";
-            }else if(count2 == 3 && randomWord1.includes(letters[2]) && letters[i] !== randomWord1[i]) {
+            }else if(count2 == 3 && randomWord.includes(guessedWord[2]) && guessedWord[i] !== randomWord[i]) {
                 squaresOfRowOne[i].style.backgroundColor = 	"#FFAC1C";
-            }else if(count2 == 4 && randomWord1.includes(letters[3]) && letters[i] !== randomWord1[i]) {
+            }else if(count2 == 4 && randomWord.includes(guessedWord[3]) && guessedWord[i] !== randomWord[i]) {
                 squaresOfRowOne[i].style.backgroundColor = 	"#FFAC1C";
-            }else if(letters[i] !== randomWord1[i]) {
+            }else if(guessedWord[i] !== randomWord[i]) {
                 squaresOfRowOne[i].style.backgroundColor = "#C8C8C8";
-            }else if(letters[i] == randomWord1[i]) {
-                squaresOfRowOne[i].style.backgroundColor = "#66FF00";
+            }else if(guessedWord[i] == randomWord[i]) {
+                squaresOfRowOne[i].style.backgroundColor = "#66FF00";   
             }
         }
     }
 }
 
+const winnerChecker = () => {
+    let guessedWord = letters.toString().replaceAll(',','').toLowerCase();
+    console.log(guessedWord);
+    if(guessedWord == randomWord) {
+        winner.innerHTML = "You Win!";
+    }
+    
+}
+
 enterButton.addEventListener("click", () => {
-    wordChecker(); 
+    wordChecker();
+    winnerChecker();
     letters = [];
 });
 
