@@ -142,8 +142,73 @@ const deleteDisplayedLetter = () => {
             letters.pop();
             count -= 1;
             console.log(letters);
-
-
+            break;
+        case 6:
+            squaresOfRowTwo[1].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break;
+        case 7:
+            squaresOfRowTwo[2].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break;
+        case 8:
+            squaresOfRowTwo[3].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break;
+        case 9:
+            squaresOfRowThree[0].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break;
+        case 10:
+            squaresOfRowThree[1].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break;
+        case 11:
+            squaresOfRowThree[2].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break;
+        case 12:
+            squaresOfRowThree[3].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break;
+        case 13:
+            squaresOfRowFour[0].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break; 
+        case 14:
+            squaresOfRowFour[1].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break; 
+        case 15:
+            squaresOfRowFour[2].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break; 
+        case 16:
+            squaresOfRowFour[3].innerHTML = "";
+            letters.pop();
+            count -= 1;
+            console.log(letters);
+            break; 
     }
 //    if(count == 4) {
 //     squaresOfRowOne[3].innerHTML = "";
