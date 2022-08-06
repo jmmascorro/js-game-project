@@ -1,4 +1,7 @@
-
+.output_squares {
+    display: flex;
+    justify-content: center;
+}
 
 table {
     border-spacing: 5px 5px;
@@ -6,6 +9,6 @@ table {
 
 td {
     border: 2px solid black;
-    width: 10vw;
-    height: 10vh;
+    width: 55px;
+    height: 45px;
 }

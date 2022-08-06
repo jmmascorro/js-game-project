@@ -1043,8 +1043,6 @@ newGameBtn.addEventListener("click", () => {
   count = 0;
   count2 = 0;
   count3 = 0;
-  console.log(letters);
-  console.log(count);
   for (let i = 0; i < squaresOfRowOne.length; i++) {
     squaresOfRowOne[i].innerHTML = "";
     squaresOfRowOne[i].style.backgroundColor = "#FFFFFF";
@@ -1248,7 +1246,6 @@ const deleteDisplayedLetter = () => {
 
 backspaceBtn.addEventListener("click", () => {
   deleteDisplayedLetter();
-  console.log(count);
 });
 
 const wordChecker = () => {
@@ -1439,7 +1436,7 @@ const winnerChecker = () => {
   let guessedWord = letters.toString().replaceAll(",", "").toLowerCase();
   console.log(guessedWord);
   if (guessedWord == randomWord) {
-    winner.innerHTML = "You Win!";
+    winner.innerHTML = "Congratulations, you guessed the word correctly!";
   }
 };
 

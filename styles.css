@@ -1,9 +1,40 @@
+.output_squares {
+  display: flex;
+  justify-content: center;
+}
+
 table {
   border-spacing: 5px 5px;
 }
 
 td {
   border: 2px solid black;
-  width: 10vw;
-  height: 10vh;
+  width: 55px;
+  height: 45px;
+}
+
+.letter {
+  width: 50px;
+  height: 35px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.winner {
+  display: flex;
+  justify-content: center;
+}
+
+.start_new {
+  display: flex;
+  justify-content: center;
 }
