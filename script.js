@@ -32,7 +32,7 @@ let count2 = 0;
 let count3 = 0;
 const guessingWords = ["home", "bike", "echo", "milk", "door", "curb", "lamb"];
 
-const randomWord = guessingWords[Math.floor(Math.random() * guessingWords.length)];
+let randomWord = guessingWords[Math.floor(Math.random() * guessingWords.length)];
 console.log(randomWord);
 
 const createWord = (letter) => {
@@ -95,20 +95,6 @@ const displayClickedLetter = () => {
             squaresOfRowFour[3].innerHTML = letters[3];
             break;
     }
-        
-    // if(count == 0) {
-    //     squaresOfRowOne[0].innerHTML = letters[0];
-        
-    // }else if(count == 1) {
-    //     squaresOfRowOne[1].innerHTML = letters[1];
-        
-    // }else if(count == 2) {
-    //     squaresOfRowOne[2].innerHTML =letters[2];
-       
-    // }else if(count == 3){
-    //     squaresOfRowOne[3].innerHTML = letters[3]; 
-        
-    // }
 }
 
 const deleteDisplayedLetter = () => {
@@ -210,27 +196,6 @@ const deleteDisplayedLetter = () => {
             console.log(letters);
             break; 
     }
-//    if(count == 4) {
-//     squaresOfRowOne[3].innerHTML = "";
-//     letters.pop();
-//     count = count - 1;
-//     console.log(letters);
-//    }else if(count == 3) {
-//     squaresOfRowOne[2].innerHTML = "";
-//     letters.pop();
-//     count = count - 1;
-//     console.log(letters);
-//    }else if(count == 2) {
-//     squaresOfRowOne[1].innerHTML = "";
-//     letters.pop();
-//     count = count - 1;
-//     console.log(letters);
-//    }else if(count == 1) {
-//     squaresOfRowOne[0].innerHTML = "";
-//     letters.pop();
-//     count = count - 1;
-//     console.log(letters);
-//    }
 }
 
 backspaceBtn.addEventListener("click", () => {
