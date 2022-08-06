@@ -25,6 +25,7 @@ const squaresOfRowFour = document.querySelectorAll(".row_four");
 const enterButton = document.querySelector(".enter");
 const backspaceBtn = document.querySelector(".backspace");
 const winner = document.querySelector(".p_winner");
+const newGameBtn = document.querySelector(".new_game");
 
 let letters = [];
 let count = 0;
@@ -34,6 +35,17 @@ const guessingWords = ["home", "bike", "echo", "milk", "door", "curb", "lamb"];
 
 let randomWord = guessingWords[Math.floor(Math.random() * guessingWords.length)];
 console.log(randomWord);
+
+newGameBtn.addEventListener("click", () => {
+    randomWord = guessingWords[Math.floor(Math.random() * guessingWords.length)];
+    console.log(randomWord);
+    letters = [];
+    count = 0;
+    count2 = 0;
+    count3 = 0;
+    console.log(letters);
+    console.log(count);
+});
 
 const createWord = (letter) => {
     letter = letter.innerHTML;
