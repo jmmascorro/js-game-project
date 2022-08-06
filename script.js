@@ -45,6 +45,22 @@ newGameBtn.addEventListener("click", () => {
     count3 = 0;
     console.log(letters);
     console.log(count);
+    for(let i = 0; i < squaresOfRowOne.length; i++) {
+        squaresOfRowOne[i].innerHTML = "";
+        squaresOfRowOne[i].style.backgroundColor = "#FFFFFF";
+    }
+    for(let i = 0; i < squaresOfRowTwo.length; i++) {
+        squaresOfRowTwo[i].innerHTML = "";
+        squaresOfRowTwo[i].style.backgroundColor = "#FFFFFF";
+    }
+    for(let i = 0; i < squaresOfRowThree.length; i++) {
+        squaresOfRowThree[i].innerHTML = "";
+        squaresOfRowThree[i].style.backgroundColor = "#FFFFFF";
+    }
+    for(let i = 0; i < squaresOfRowFour.length; i++) {
+        squaresOfRowFour[i].innerHTML = "";
+        squaresOfRowFour[i].style.backgroundColor = "#FFFFFF";
+    }
 });
 
 const createWord = (letter) => {
