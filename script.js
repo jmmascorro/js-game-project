@@ -21,6 +21,7 @@ const squaresOfRowOne = document.querySelectorAll(".row_one");
 const squaresOfRowTwo = document.querySelectorAll(".row_two");
 const squaresOfRowThree = document.querySelectorAll(".row_three");
 const squaresOfRowFour = document.querySelectorAll(".row_four");
+const squaresOfRowFive = document.querySelectorAll(".row_five");
 const enterButton = document.querySelector(".enter");
 const backspaceBtn = document.querySelector(".backspace");
 const winner = document.querySelector(".p_winner");
@@ -1060,6 +1061,10 @@ newGameBtn.addEventListener("click", () => {
     squaresOfRowFour[i].innerHTML = "";
     squaresOfRowFour[i].style.backgroundColor = "#FFFFFF";
   }
+  for (let i = 0; i < squaresOfRowFive.length; i++) {
+    squaresOfRowFive[i].innerHTML = "";
+    squaresOfRowFive[i].style.backgroundColor = "#FFFFFF";
+  }
 });
 
 const createWord = (letter) => {
@@ -1121,6 +1126,18 @@ const displayClickedLetter = () => {
     case 15:
       squaresOfRowFour[3].innerHTML = letters[3];
       break;
+    case 16:
+      squaresOfRowFive[0].innerHTML = letters[0];
+      break;
+    case 17:
+      squaresOfRowFive[1].innerHTML = letters[1];
+      break;
+    case 18:
+      squaresOfRowFive[2].innerHTML = letters[2];
+      break;
+    case 19:
+      squaresOfRowFive[3].innerHTML = letters[3];
+      break;
   }
 };
 
@@ -1130,97 +1147,101 @@ const deleteDisplayedLetter = () => {
       squaresOfRowOne[0].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 2:
       squaresOfRowOne[1].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 3:
       squaresOfRowOne[2].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 4:
       squaresOfRowOne[3].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 5:
       squaresOfRowTwo[0].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 6:
       squaresOfRowTwo[1].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 7:
       squaresOfRowTwo[2].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 8:
       squaresOfRowTwo[3].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 9:
       squaresOfRowThree[0].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 10:
       squaresOfRowThree[1].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 11:
       squaresOfRowThree[2].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 12:
       squaresOfRowThree[3].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 13:
       squaresOfRowFour[0].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 14:
       squaresOfRowFour[1].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 15:
       squaresOfRowFour[2].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
       break;
     case 16:
       squaresOfRowFour[3].innerHTML = "";
       letters.pop();
       count -= 1;
-      console.log(letters);
+      break;
+    case 17:
+      squaresOfRowFive[0].innerHTML = "";
+      letters.pop();
+      count -= 1;
+      break;
+    case 18:
+      squaresOfRowFive[1].innerHTML = "";
+      letters.pop();
+      count -= 1;
+      break;
+    case 19:
+      squaresOfRowFive[2].innerHTML = "";
+      letters.pop();
+      count -= 1;
+      break;
+    case 20:
+      squaresOfRowFive[3].innerHTML = "";
+      letters.pop();
+      count -= 1;
       break;
   }
 };
@@ -1372,6 +1393,42 @@ const wordChecker = () => {
           squaresOfRowFour[i].style.backgroundColor = "#C8C8C8";
         } else if (guessedWord[i] == randomWord[i]) {
           squaresOfRowFour[i].style.backgroundColor = "#66FF00";
+        }
+      }
+    }
+  } else if (count3 == 4) {
+    let guessedWord = letters.toString().replaceAll(",", "").toLowerCase();
+    for (let i = 0; i < guessedWord.length; i++) {
+      count2 += 1;
+      for (let j = 0; j < randomWord.length; j++) {
+        if (
+          count2 == 1 &&
+          randomWord.includes(guessedWord[0]) &&
+          guessedWord[i] !== randomWord[i]
+        ) {
+          squaresOfRowFive[i].style.backgroundColor = "#FFAC1C";
+        } else if (
+          count2 == 2 &&
+          randomWord.includes(guessedWord[1]) &&
+          guessedWord[i] !== randomWord[i]
+        ) {
+          squaresOfRowFive[i].style.backgroundColor = "#FFAC1C";
+        } else if (
+          count2 == 3 &&
+          randomWord.includes(guessedWord[2]) &&
+          guessedWord[i] !== randomWord[i]
+        ) {
+          squaresOfRowFive[i].style.backgroundColor = "#FFAC1C";
+        } else if (
+          count2 == 4 &&
+          randomWord.includes(guessedWord[3]) &&
+          guessedWord[i] !== randomWord[i]
+        ) {
+          squaresOfRowFive[i].style.backgroundColor = "#FFAC1C";
+        } else if (guessedWord[i] !== randomWord[i]) {
+          squaresOfRowFive[i].style.backgroundColor = "#C8C8C8";
+        } else if (guessedWord[i] == randomWord[i]) {
+          squaresOfRowFive[i].style.backgroundColor = "#66FF00";
         }
       }
     }
