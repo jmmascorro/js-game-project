@@ -1,9 +1,11 @@
 @use 'guessing-squares';
 @use 'buttons';
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+    font-family: "Bree Serif", "sans-serif";
 }
 
 body {

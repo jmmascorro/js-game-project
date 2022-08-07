@@ -28,6 +28,7 @@ const winner = document.querySelector(".p_winner");
 const newGameBtn = document.querySelector(".new_game");
 
 let letters = [];
+let buttonsClicked = [];
 let count = 0;
 let count2 = 0;
 let count3 = 0;
@@ -1065,8 +1066,8 @@ newGameBtn.addEventListener("click", () => {
   }
 });
 
-const createWord = (letter) => {
-  letter = letter.innerHTML;
+const createWord = (button) => {
+   let letter = button.innerHTML;
   letters.push(letter.toLowerCase());
 };
 
@@ -1260,28 +1261,34 @@ const wordChecker = () => {
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 2 &&
           randomWord.includes(guessedWord[1]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 3 &&
           randomWord.includes(guessedWord[2]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 4 &&
           randomWord.includes(guessedWord[3]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (guessedWord[i] !== randomWord[i]) {
           squaresOfRowOne[i].style.backgroundColor = "#C8C8C8";
+          buttonsClicked[i].style.backgroundColor = "#C8C8C8";
         } else if (guessedWord[i] == randomWord[i]) {
           squaresOfRowOne[i].style.backgroundColor = "#66FF00";
+          buttonsClicked[i].style.backgroundColor = "#66FF00";
         }
       }
     }
@@ -1296,28 +1303,34 @@ const wordChecker = () => {
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowTwo[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 2 &&
           randomWord.includes(guessedWord[1]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowTwo[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 3 &&
           randomWord.includes(guessedWord[2]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowTwo[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 4 &&
           randomWord.includes(guessedWord[3]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowTwo[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (guessedWord[i] !== randomWord[i]) {
           squaresOfRowTwo[i].style.backgroundColor = "#C8C8C8";
+          buttonsClicked[i].style.backgroundColor = "#C8C8C8";
         } else if (guessedWord[i] == randomWord[i]) {
           squaresOfRowTwo[i].style.backgroundColor = "#66FF00";
+          buttonsClicked[i].style.backgroundColor = "#66FF00";
         }
       }
     }
@@ -1332,28 +1345,34 @@ const wordChecker = () => {
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowThree[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 2 &&
           randomWord.includes(guessedWord[1]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowThree[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 3 &&
           randomWord.includes(guessedWord[2]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowThree[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 4 &&
           randomWord.includes(guessedWord[3]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowThree[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (guessedWord[i] !== randomWord[i]) {
           squaresOfRowThree[i].style.backgroundColor = "#C8C8C8";
+          buttonsClicked[i].style.backgroundColor = "#C8C8C8";
         } else if (guessedWord[i] == randomWord[i]) {
           squaresOfRowThree[i].style.backgroundColor = "#66FF00";
+          buttonsClicked[i].style.backgroundColor = "#66FF00";
         }
       }
     }
@@ -1368,28 +1387,34 @@ const wordChecker = () => {
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowFour[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 2 &&
           randomWord.includes(guessedWord[1]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowFour[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 3 &&
           randomWord.includes(guessedWord[2]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowFour[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 4 &&
           randomWord.includes(guessedWord[3]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowFour[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (guessedWord[i] !== randomWord[i]) {
           squaresOfRowFour[i].style.backgroundColor = "#C8C8C8";
+          buttonsClicked[i].style.backgroundColor = "#C8C8C8";
         } else if (guessedWord[i] == randomWord[i]) {
           squaresOfRowFour[i].style.backgroundColor = "#66FF00";
+          buttonsClicked[i].style.backgroundColor = "#66FF00";
         }
       }
     }
@@ -1404,28 +1429,34 @@ const wordChecker = () => {
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowFive[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 2 &&
           randomWord.includes(guessedWord[1]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowFive[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 3 &&
           randomWord.includes(guessedWord[2]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowFive[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (
           count2 == 4 &&
           randomWord.includes(guessedWord[3]) &&
           guessedWord[i] !== randomWord[i]
         ) {
           squaresOfRowFive[i].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (guessedWord[i] !== randomWord[i]) {
           squaresOfRowFive[i].style.backgroundColor = "#C8C8C8";
+          buttonsClicked[i].style.backgroundColor = "#C8C8C8";
         } else if (guessedWord[i] == randomWord[i]) {
           squaresOfRowFive[i].style.backgroundColor = "#66FF00";
+          buttonsClicked[i].style.backgroundColor = "#66FF00";
         }
       }
     }
@@ -1434,7 +1465,6 @@ const wordChecker = () => {
 
 const winnerChecker = () => {
   let guessedWord = letters.toString().replaceAll(",", "").toLowerCase();
-  console.log(guessedWord);
   if (guessedWord == randomWord) {
     winner.innerHTML = "Congratulations, you guessed the word correctly!";
   }
@@ -1446,11 +1476,13 @@ enterButton.addEventListener("click", () => {
   letters = [];
   count3 += 1;
   count2 = 0;
+  buttonsClicked = [];
 });
 
-lettersBtn.forEach((letter) => {
-  letter.addEventListener("click", () => {
-    createWord(letter);
+lettersBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttonsClicked.push(button);
+    createWord(button);
     displayClickedLetter();
     counter();
   });
