@@ -1044,6 +1044,11 @@ newGameBtn.addEventListener("click", () => {
   count = 0;
   count2 = 0;
   count3 = 0;
+  buttonsClicked = [];
+  winner.innerHTML = "";
+  for(let i = 0; i < lettersBtn.length; i++) {
+    lettersBtn[i].style.backgroundColor = "#808080";
+  }
   for (let i = 0; i < squaresOfRowOne.length; i++) {
     squaresOfRowOne[i].innerHTML = "";
     squaresOfRowOne[i].style.backgroundColor = "#FFFFFF";
@@ -1463,10 +1468,13 @@ const wordChecker = () => {
   }
 };
 
+
 const winnerChecker = () => {
   let guessedWord = letters.toString().replaceAll(",", "").toLowerCase();
   if (guessedWord == randomWord) {
     winner.innerHTML = "Congratulations, you guessed the word correctly!";
+  }else if(count3 == 4 && guessedWord != randomWord) {
+    winner.innerHTML = `Sorry, the word was ${randomWord}`;
   }
 };
 

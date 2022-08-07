@@ -42,6 +42,14 @@ td {
 .letter {
   width: 50px;
   height: 35px;
+  background-color: #4f666a;
+  color: white;
+}
+
+.input_buttons {
+  margin-top: 50px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
 }
 
 * {
@@ -53,15 +61,17 @@ td {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .winner {
   display: flex;
   justify-content: center;
+  margin: 20px;
 }
 
 .start_new {
   display: flex;
   justify-content: center;
+  margin: 20px;
 }

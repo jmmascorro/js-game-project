@@ -11,15 +11,17 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .winner {
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
 
 .start_new {
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
