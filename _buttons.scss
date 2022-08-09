@@ -1,12 +1,163 @@
 .letter {
-    width: 50px;
-    height: 35px;
-    background-color: #4f666a;
+    width: 35px;
+    height: 58px;
+    background-color: #4F666A;
     color: white;
-    }
+    text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000;
+    border-radius: 8px;
+    border: 2px solid white;
+    font-size: 18px;
+}
+
 
 .input_buttons {
-    margin-top: 50px;
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "q w e rbtn t ybtn u i o p"
+    "a s d f g h j k l"
+    "entr entr z xbtn c v b n m bck";
+    gap: 10px;
 }
+
+.enter {
+    grid-area: entr;
+    width: 54px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #3d5357;
+    color: white;
+    text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000;
+    border: 2px solid white;
+    font-size: 14px;
+    
+}
+
+.backspace {
+    grid-area: bck;
+    width: 54px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #3d5357;
+    color: white;
+    text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input_btns_row_two {
+    padding-left: 20px;
+}
+
+#q {
+    grid-area: q;
+}
+
+#w {
+    grid-area: w;
+}
+
+#e {
+    grid-area: e;
+}
+
+#r {
+    grid-area: rbtn;
+}
+
+#t {
+    grid-area: t;
+}
+
+#y {
+    grid-area: ybtn;
+}
+
+#u {
+    grid-area: u;
+}
+
+#i {
+    grid-area: i;
+}
+
+#o {
+    grid-area: o;
+}
+
+#p {
+    grid-area: p;
+}
+
+#a {
+    grid-area: a;
+}
+
+#s {
+    grid-area: s;
+}
+
+#d {
+    grid-area: d;
+}
+
+#f {
+    grid-area: f;
+}
+
+#g {
+    grid-area: g;
+}
+
+#h {
+    grid-area: h;
+}
+
+#j {
+    grid-area: j;
+}
+
+#k {
+    grid-area: k;
+}
+
+#l {
+    grid-area: l;
+}
+
+#z {
+    grid-area: z;
+}
+
+#x {
+    grid-area: xbtn;
+}
+
+#c {
+    grid-area: c;
+}
+
+#v {
+    grid-area: v;
+}
+
+#b {
+    grid-area: b;
+}
+
+#n {
+    grid-area: n;
+}
+
+#m {
+    grid-area: m;
+}
+
+
 
 

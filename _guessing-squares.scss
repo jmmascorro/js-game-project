@@ -8,9 +8,12 @@ table {
 }
 
 td {
-    border: 2px solid black;
+    border: 2px solid rgb(168, 167, 167);
     width: 55px;
     height: 45px;
+    color: white;
+    text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000;
 }
 
 .row_one {
