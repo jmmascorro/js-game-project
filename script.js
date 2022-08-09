@@ -1150,101 +1150,123 @@ const deleteDisplayedLetter = () => {
     case 1:
       squaresOfRowOne[0].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 2:
       squaresOfRowOne[1].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 3:
       squaresOfRowOne[2].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
+      console.log(letters);
       break;
     case 4:
       squaresOfRowOne[3].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
+      console.log(letters);
       break;
     case 5:
       squaresOfRowTwo[0].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 6:
       squaresOfRowTwo[1].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 7:
       squaresOfRowTwo[2].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 8:
       squaresOfRowTwo[3].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 9:
       squaresOfRowThree[0].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 10:
       squaresOfRowThree[1].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 11:
       squaresOfRowThree[2].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 12:
       squaresOfRowThree[3].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 13:
       squaresOfRowFour[0].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 14:
       squaresOfRowFour[1].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 15:
       squaresOfRowFour[2].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 16:
       squaresOfRowFour[3].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 17:
       squaresOfRowFive[0].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 18:
       squaresOfRowFive[1].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 19:
       squaresOfRowFive[2].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
     case 20:
       squaresOfRowFive[3].innerHTML = "";
       letters.pop();
+      buttonsClicked.pop();
       count -= 1;
       break;
   }
