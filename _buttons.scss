@@ -1,7 +1,7 @@
 .letter {
     width: 35px;
     height: 58px;
-    background-color: #4F666A;
+    background-color: rgb(98, 97, 97);
     color: white;
     text-shadow: -1px 1px 2px #000,
 				  1px 1px 2px #000;
@@ -12,7 +12,7 @@
 
 
 .input_buttons {
-    margin-top: 30px;
+    margin-top: 20px;
     display: grid;
     justify-content: center;
     grid-template-areas: 
@@ -27,7 +27,7 @@
     width: 54px;
     height: 58px;
     border-radius: 8px;
-    background-color: #3d5357;
+    background-color: rgb(58, 57, 57);
     color: white;
     text-shadow: -1px 1px 2px #000,
 				  1px 1px 2px #000;
@@ -41,7 +41,7 @@
     width: 54px;
     height: 58px;
     border-radius: 8px;
-    background-color: #3d5357;
+    background-color: rgb(58, 57, 57);
     color: white;
     text-shadow: -1px 1px 2px #000,
 				  1px 1px 2px #000;

@@ -26,6 +26,8 @@ const enterButton = document.querySelector(".enter");
 const backspaceBtn = document.querySelector(".backspace");
 const winner = document.querySelector(".p_winner");
 const newGameBtn = document.querySelector(".new_game");
+const card = document.querySelector(".card");
+const closeBtn = document.querySelector(".close_button");
 
 let letters = [];
 let buttonsClicked = [];
@@ -1037,6 +1039,10 @@ let randomWord =
   guessingWords[Math.floor(Math.random() * guessingWords.length)].toUpperCase();
 console.log(randomWord);
 
+closeBtn.addEventListener("click", () => {
+  card.style.display = "none";
+});
+
 newGameBtn.addEventListener("click", () => {
   randomWord = guessingWords[Math.floor(Math.random() * guessingWords.length)].toUpperCase();
   console.log(randomWord);
@@ -1047,7 +1053,7 @@ newGameBtn.addEventListener("click", () => {
   buttonsClicked = [];
   winner.innerHTML = "";
   for(let i = 0; i < lettersBtn.length; i++) {
-    lettersBtn[i].style.backgroundColor = "#4F666A";
+    lettersBtn[i].style.backgroundColor = "rgb(98, 97, 97)";
   }
   for (let i = 0; i < squaresOfRowOne.length; i++) {
     squaresOfRowOne[i].innerHTML = "";
