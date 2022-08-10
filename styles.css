@@ -249,13 +249,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #7d7b7b;
+  background-color: #898787;
 }
 
 .winner {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 10px;
 }
 
 .p_winner {
@@ -282,7 +282,7 @@ body {
   font-size: 14px;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 480px) {
   .card {
     width: 35vw;
     height: 50vh;
@@ -290,6 +290,11 @@ body {
   }
   .card p {
     font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #898888 !important;
+    cursor: pointer;
   }
 
   .letter {
