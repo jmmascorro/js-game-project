@@ -282,7 +282,7 @@ body {
   font-size: 14px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
   .card {
     width: 35vw;
     height: 50vh;
@@ -293,7 +293,8 @@ body {
   }
 
   button:hover {
-    background-color: #898888 !important;
+    box-shadow: 0 0.5em 0.5em -0.4em !important;
+    transform: translateY(-0.25em) !important;
     cursor: pointer;
   }
 

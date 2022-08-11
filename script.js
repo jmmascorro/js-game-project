@@ -11,6 +11,7 @@ const newGameBtn = document.querySelector(".new_game");
 const card = document.querySelector(".card");
 const closeBtn = document.querySelector(".close_button");
 
+
 let letters = [];
 let buttonsClicked = [];
 let count = 0;
@@ -1019,11 +1020,11 @@ const guessingWords = [
 
 let randomWord =
   guessingWords[Math.floor(Math.random() * guessingWords.length)].toUpperCase();
-console.log(randomWord);
 
 closeBtn.addEventListener("click", () => {
   card.style.display = "none";
 });
+
 
 newGameBtn.addEventListener("click", () => {
   randomWord = guessingWords[Math.floor(Math.random() * guessingWords.length)].toUpperCase();
