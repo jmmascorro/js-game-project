@@ -10,6 +10,7 @@ const winner = document.querySelector(".p_winner");
 const newGameBtn = document.querySelector(".new_game");
 const card = document.querySelector(".card");
 const closeBtn = document.querySelector(".close_button");
+const infoBtn = document.querySelector(".info");
 
 
 let letters = [];
@@ -1020,10 +1021,15 @@ const guessingWords = [
 
 let randomWord =
   guessingWords[Math.floor(Math.random() * guessingWords.length)].toUpperCase();
+  console.log(randomWord);
 
 closeBtn.addEventListener("click", () => {
   card.style.display = "none";
 });
+
+infoBtn.addEventListener("click", () => {
+  card.style.display = "initial";
+})
 
 
 newGameBtn.addEventListener("click", () => {
