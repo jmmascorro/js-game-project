@@ -1027,10 +1027,6 @@ closeBtn.addEventListener("click", () => {
   card.style.display = "none";
 });
 
-infoBtn.addEventListener("click", () => {
-  card.style.display = "initial";
-})
-
 
 newGameBtn.addEventListener("click", () => {
   randomWord = guessingWords[Math.floor(Math.random() * guessingWords.length)].toUpperCase();
