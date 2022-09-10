@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "confetti-js": "^0.0.18"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
