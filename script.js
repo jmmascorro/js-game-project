@@ -1265,9 +1265,10 @@ const deleteDisplayedLetter = () => {
 
 backspaceBtn.addEventListener("click", () => {
   
-  if (count == 0 || count == 4 || count == 8 || count == 12 || count == 16) {
+  if (count == 0 || count == 4 && count3 == 1 || count == 8 && count3 == 2 || count == 12 && count3 == 3 || count == 16 && count3 == 4) {
     console.log("back");
     console.log(count);
+    console.log(count3);
   } else {
     deleteDisplayedLetter();
   }
