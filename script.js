@@ -1264,7 +1264,14 @@ const deleteDisplayedLetter = () => {
 };
 
 backspaceBtn.addEventListener("click", () => {
-  deleteDisplayedLetter();
+  
+  if (count == 0 || count == 4 || count == 8 || count == 12 || count == 16) {
+    console.log("back");
+    console.log(count);
+  } else {
+    deleteDisplayedLetter();
+  }
+  
 });
 
 const wordChecker = () => {
@@ -1493,12 +1500,18 @@ const winnerChecker = () => {
 };
 
 enterButton.addEventListener("click", () => {
-  wordChecker();
-  winnerChecker();
-  letters = [];
-  count3 += 1;
-  count2 = 0;
-  buttonsClicked = [];
+  
+  if (count == 4 || count == 8 || count == 12 || count == 16 || count == 20) {
+    wordChecker();
+    winnerChecker();
+    letters = [];
+    count3 += 1;
+    count2 = 0;
+    buttonsClicked = [];
+  } else {
+    console.log(count);
+    console.log("oops");
+  }
 });
 
 lettersBtn.forEach((button) => {
