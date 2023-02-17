@@ -154,7 +154,7 @@ var displayClickedLetter = function displayClickedLetter() {
 
     case 12:
       if (count3 == 3) {
-        squaresOfRowThree[0].innerHTML = letters[0];
+        squaresOfRowFour[0].innerHTML = letters[0];
       } else {
         wrong.innerHTML = "Only four letters, fucker!";
       }
@@ -163,28 +163,28 @@ var displayClickedLetter = function displayClickedLetter() {
 
     case 13:
       if (count3 == 3) {
-        squaresOfRowThree[1].innerHTML = letters[1];
+        squaresOfRowFour[1].innerHTML = letters[1];
       }
 
       break;
 
     case 14:
       if (count3 == 3) {
-        squaresOfRowThree[2].innerHTML = letters[2];
+        squaresOfRowFour[2].innerHTML = letters[2];
       }
 
       break;
 
     case 15:
       if (count3 == 3) {
-        squaresOfRowThree[3].innerHTML = letters[3];
+        squaresOfRowFour[3].innerHTML = letters[3];
       }
 
       break;
 
     case 16:
       if (count3 == 4) {
-        squaresOfRowThree[0].innerHTML = letters[0];
+        squaresOfRowFive[0].innerHTML = letters[0];
       } else {
         wrong.innerHTML = "Only four letters, fucker!";
       }
@@ -193,21 +193,21 @@ var displayClickedLetter = function displayClickedLetter() {
 
     case 17:
       if (count3 == 4) {
-        squaresOfRowThree[1].innerHTML = letters[1];
+        squaresOfRowFive[1].innerHTML = letters[1];
       }
 
       break;
 
     case 18:
       if (count3 == 4) {
-        squaresOfRowThree[2].innerHTML = letters[2];
+        squaresOfRowFive[2].innerHTML = letters[2];
       }
 
       break;
 
     case 19:
       if (count3 == 4) {
-        squaresOfRowThree[3].innerHTML = letters[3];
+        squaresOfRowFive[3].innerHTML = letters[3];
       }
 
       break;
