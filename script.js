@@ -11,6 +11,7 @@ const newGameBtn = document.querySelector(".new_game");
 const card = document.querySelector(".card");
 const closeBtn = document.querySelector(".close_button");
 const infoBtn = document.querySelector(".info");
+const wrong = document.querySelector(".p_wrong");
 
 
 let letters = [];
@@ -1086,52 +1087,96 @@ const displayClickedLetter = () => {
       squaresOfRowOne[3].innerHTML = letters[3];
       break;
     case 4:
-      squaresOfRowTwo[0].innerHTML = letters[0];
+      if(count3 == 1){
+        squaresOfRowTwo[0].innerHTML = letters[0];
+      } else {
+        wrong.innerHTML = "Only four letters, fucker!"
+      }
       break;
     case 5:
-      squaresOfRowTwo[1].innerHTML = letters[1];
+      if(count3 ==1){
+        squaresOfRowTwo[1].innerHTML = letters[1];
+      }
+      
       break;
     case 6:
-      squaresOfRowTwo[2].innerHTML = letters[2];
+      if(count3 ==1){
+        squaresOfRowTwo[2].innerHTML = letters[2];
+      }
+     
       break;
     case 7:
-      squaresOfRowTwo[3].innerHTML = letters[3];
+      if(count3 == 1){
+        squaresOfRowTwo[3].innerHTML = letters[3];
+      }
+      
       break;
     case 8:
-      squaresOfRowThree[0].innerHTML = letters[0];
+      if(count3 == 2){
+        squaresOfRowThree[0].innerHTML = letters[0];
+      } else {
+        wrong.innerHTML = "Only four letters, fucker!"
+      }
+      
       break;
     case 9:
-      squaresOfRowThree[1].innerHTML = letters[1];
+      if(count3 == 2){
+        squaresOfRowThree[1].innerHTML = letters[1];
+      }
       break;
     case 10:
-      squaresOfRowThree[2].innerHTML = letters[2];
+      if(count3 == 2){
+        squaresOfRowThree[2].innerHTML = letters[2];
+      }
       break;
     case 11:
-      squaresOfRowThree[3].innerHTML = letters[3];
+      if(count3 == 2){
+        squaresOfRowThree[3].innerHTML = letters[3];
+      }
       break;
     case 12:
-      squaresOfRowFour[0].innerHTML = letters[0];
+      if(count3 == 3){
+        squaresOfRowThree[0].innerHTML = letters[0];
+      } else {
+        wrong.innerHTML = "Only four letters, fucker!"
+      }
       break;
     case 13:
-      squaresOfRowFour[1].innerHTML = letters[1];
+      if(count3 == 3){
+        squaresOfRowThree[1].innerHTML = letters[1];
+      }
       break;
     case 14:
-      squaresOfRowFour[2].innerHTML = letters[2];
+      if(count3 == 3){
+        squaresOfRowThree[2].innerHTML = letters[2];
+      }
       break;
     case 15:
-      squaresOfRowFour[3].innerHTML = letters[3];
+      if(count3 == 3){
+        squaresOfRowThree[3].innerHTML = letters[3];
+      }
       break;
     case 16:
-      squaresOfRowFive[0].innerHTML = letters[0];
+      if(count3 == 4){
+        squaresOfRowThree[0].innerHTML = letters[0];
+      } else {
+        wrong.innerHTML = "Only four letters, fucker!"
+      }
       break;
     case 17:
-      squaresOfRowFive[1].innerHTML = letters[1];
+      if(count3 == 4){
+        squaresOfRowThree[1].innerHTML = letters[1];
+      }
       break;
     case 18:
-      squaresOfRowFive[2].innerHTML = letters[2];
+      if(count3 == 4){
+        squaresOfRowThree[2].innerHTML = letters[2];
+      }
       break;
     case 19:
-      squaresOfRowFive[3].innerHTML = letters[3];
+      if(count3 == 4){
+        squaresOfRowThree[3].innerHTML = letters[3];
+      }
       break;
   }
 };
@@ -1163,6 +1208,7 @@ const deleteDisplayedLetter = () => {
       buttonsClicked.pop();
       count -= 1;
       console.log(letters);
+      wrong.innerHTML = "";
       break;
     case 5:
       squaresOfRowTwo[0].innerHTML = "";
@@ -1187,6 +1233,7 @@ const deleteDisplayedLetter = () => {
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
+      wrong.innerHTML = "";
       break;
     case 9:
       squaresOfRowThree[0].innerHTML = "";
@@ -1211,6 +1258,7 @@ const deleteDisplayedLetter = () => {
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
+      wrong.innerHTML = "";
       break;
     case 13:
       squaresOfRowFour[0].innerHTML = "";
@@ -1235,6 +1283,7 @@ const deleteDisplayedLetter = () => {
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
+      wrong.innerHTML = "";
       break;
     case 17:
       squaresOfRowFive[0].innerHTML = "";
@@ -1509,6 +1558,7 @@ enterButton.addEventListener("click", () => {
     count3 += 1;
     count2 = 0;
     buttonsClicked = [];
+    wrong.innerHTML = "";
   } else {
     console.log(count);
     console.log("oops");

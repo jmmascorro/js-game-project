@@ -265,6 +265,13 @@ body {
   text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 
+.p_wrong {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
 .start_new {
   display: flex;
   justify-content: center;
