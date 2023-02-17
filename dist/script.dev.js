@@ -206,11 +206,11 @@ var displayClickedLetter = function displayClickedLetter() {
       break;
 
     case 19:
-      if (count3 == 4) {
-        squaresOfRowFive[3].innerHTML = letters[3];
-      }
-
+      squaresOfRowFive[3].innerHTML = letters[3];
       break;
+
+    default:
+      console.log("done");
   }
 };
 
@@ -360,7 +360,15 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
+      console.log("oops");
       break;
+
+    default:
+      squaresOfRowFive[3].innerHTML = "";
+      letters.pop();
+      buttonsClicked.pop();
+      count -= 1;
+      console.log("oops");
   }
 };
 
