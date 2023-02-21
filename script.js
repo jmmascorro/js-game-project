@@ -1090,7 +1090,7 @@ const displayClickedLetter = () => {
       if(count3 == 1){
         squaresOfRowTwo[0].innerHTML = letters[0];
       } else {
-        wrong.innerHTML = "Only four letters, fucker!"
+        wrong.innerHTML = "Only four letters, please."
       }
       break;
     case 5:
@@ -1115,7 +1115,7 @@ const displayClickedLetter = () => {
       if(count3 == 2){
         squaresOfRowThree[0].innerHTML = letters[0];
       } else {
-        wrong.innerHTML = "Only four letters, fucker!"
+        wrong.innerHTML = "Only four letters, please."
       }
       
       break;
@@ -1138,7 +1138,7 @@ const displayClickedLetter = () => {
       if(count3 == 3){
         squaresOfRowFour[0].innerHTML = letters[0];
       } else {
-        wrong.innerHTML = "Only four letters, fucker!"
+        wrong.innerHTML = "Only four letters, please."
       }
       break;
     case 13:
@@ -1160,7 +1160,7 @@ const displayClickedLetter = () => {
       if(count3 == 4){
         squaresOfRowFive[0].innerHTML = letters[0];
       } else {
-        wrong.innerHTML = "Only four letters, fucker!"
+        wrong.innerHTML = "Only four letters, please."
       }
       break;
     case 17:
@@ -1175,9 +1175,11 @@ const displayClickedLetter = () => {
       break;
     case 19:
         squaresOfRowFive[3].innerHTML = letters[3];
+        console.log(letters[i]);
       break;
-    default:
-      console.log("done");
+
+    // default:
+    //   console.log("done");
 
   }
 };
@@ -1311,11 +1313,17 @@ const deleteDisplayedLetter = () => {
       count -= 1;
       console.log("oops")
       break;
-      default: 
+    case 21:
       squaresOfRowFive[3].innerHTML = "";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
+      console.log("oops")
+      default: 
+      squaresOfRowFive[3].innerHTML = "";
+      // letters.pop();
+      // buttonsClicked.pop();
+      // count -= 1;
       console.log("oops")
   }
 };

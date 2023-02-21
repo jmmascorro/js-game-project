@@ -35,33 +35,33 @@ newGameBtn.addEventListener("click", function () {
   buttonsClicked = [];
   winner.innerHTML = "";
 
-  for (var i = 0; i < lettersBtn.length; i++) {
-    lettersBtn[i].style.backgroundColor = "rgb(98, 97, 97)";
+  for (var _i = 0; _i < lettersBtn.length; _i++) {
+    lettersBtn[_i].style.backgroundColor = "rgb(98, 97, 97)";
   }
 
-  for (var _i = 0; _i < squaresOfRowOne.length; _i++) {
-    squaresOfRowOne[_i].innerHTML = "";
-    squaresOfRowOne[_i].style.backgroundColor = "#6b6a6a";
+  for (var _i2 = 0; _i2 < squaresOfRowOne.length; _i2++) {
+    squaresOfRowOne[_i2].innerHTML = "";
+    squaresOfRowOne[_i2].style.backgroundColor = "#6b6a6a";
   }
 
-  for (var _i2 = 0; _i2 < squaresOfRowTwo.length; _i2++) {
-    squaresOfRowTwo[_i2].innerHTML = "";
-    squaresOfRowTwo[_i2].style.backgroundColor = "#6b6a6a";
+  for (var _i3 = 0; _i3 < squaresOfRowTwo.length; _i3++) {
+    squaresOfRowTwo[_i3].innerHTML = "";
+    squaresOfRowTwo[_i3].style.backgroundColor = "#6b6a6a";
   }
 
-  for (var _i3 = 0; _i3 < squaresOfRowThree.length; _i3++) {
-    squaresOfRowThree[_i3].innerHTML = "";
-    squaresOfRowThree[_i3].style.backgroundColor = "#6b6a6a";
+  for (var _i4 = 0; _i4 < squaresOfRowThree.length; _i4++) {
+    squaresOfRowThree[_i4].innerHTML = "";
+    squaresOfRowThree[_i4].style.backgroundColor = "#6b6a6a";
   }
 
-  for (var _i4 = 0; _i4 < squaresOfRowFour.length; _i4++) {
-    squaresOfRowFour[_i4].innerHTML = "";
-    squaresOfRowFour[_i4].style.backgroundColor = "#6b6a6a";
+  for (var _i5 = 0; _i5 < squaresOfRowFour.length; _i5++) {
+    squaresOfRowFour[_i5].innerHTML = "";
+    squaresOfRowFour[_i5].style.backgroundColor = "#6b6a6a";
   }
 
-  for (var _i5 = 0; _i5 < squaresOfRowFive.length; _i5++) {
-    squaresOfRowFive[_i5].innerHTML = "";
-    squaresOfRowFive[_i5].style.backgroundColor = "#6b6a6a";
+  for (var _i6 = 0; _i6 < squaresOfRowFive.length; _i6++) {
+    squaresOfRowFive[_i6].innerHTML = "";
+    squaresOfRowFive[_i6].style.backgroundColor = "#6b6a6a";
   }
 });
 
@@ -96,7 +96,7 @@ var displayClickedLetter = function displayClickedLetter() {
       if (count3 == 1) {
         squaresOfRowTwo[0].innerHTML = letters[0];
       } else {
-        wrong.innerHTML = "Only four letters, fucker!";
+        wrong.innerHTML = "Only four letters, please.";
       }
 
       break;
@@ -126,7 +126,7 @@ var displayClickedLetter = function displayClickedLetter() {
       if (count3 == 2) {
         squaresOfRowThree[0].innerHTML = letters[0];
       } else {
-        wrong.innerHTML = "Only four letters, fucker!";
+        wrong.innerHTML = "Only four letters, please.";
       }
 
       break;
@@ -156,7 +156,7 @@ var displayClickedLetter = function displayClickedLetter() {
       if (count3 == 3) {
         squaresOfRowFour[0].innerHTML = letters[0];
       } else {
-        wrong.innerHTML = "Only four letters, fucker!";
+        wrong.innerHTML = "Only four letters, please.";
       }
 
       break;
@@ -186,7 +186,7 @@ var displayClickedLetter = function displayClickedLetter() {
       if (count3 == 4) {
         squaresOfRowFive[0].innerHTML = letters[0];
       } else {
-        wrong.innerHTML = "Only four letters, fucker!";
+        wrong.innerHTML = "Only four letters, please.";
       }
 
       break;
@@ -207,10 +207,10 @@ var displayClickedLetter = function displayClickedLetter() {
 
     case 19:
       squaresOfRowFive[3].innerHTML = letters[3];
+      console.log(letters[i]);
       break;
-
-    default:
-      console.log("done");
+    // default:
+    //   console.log("done");
   }
 };
 
@@ -363,11 +363,18 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
       console.log("oops");
       break;
 
-    default:
+    case 21:
       squaresOfRowFive[3].innerHTML = "";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
+      console.log("oops");
+
+    default:
+      squaresOfRowFive[3].innerHTML = ""; // letters.pop();
+      // buttonsClicked.pop();
+      // count -= 1;
+
       console.log("oops");
   }
 };
@@ -386,140 +393,140 @@ var wordChecker = function wordChecker() {
   if (count3 == 0) {
     var guessedWord = letters.toString().replaceAll(",", "");
 
-    for (var i = 0; i < guessedWord.length; i++) {
+    for (var _i7 = 0; _i7 < guessedWord.length; _i7++) {
       count2 += 1;
 
       for (var j = 0; j < randomWord.length; j++) {
-        if (count2 == 1 && randomWord.includes(guessedWord[0]) && guessedWord[i] !== randomWord[i]) {
-          squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 2 && randomWord.includes(guessedWord[1]) && guessedWord[i] !== randomWord[i]) {
-          squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 3 && randomWord.includes(guessedWord[2]) && guessedWord[i] !== randomWord[i]) {
-          squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 4 && randomWord.includes(guessedWord[3]) && guessedWord[i] !== randomWord[i]) {
-          squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[i].style.backgroundColor = "#FFAC1C";
-        } else if (guessedWord[i] !== randomWord[i]) {
-          squaresOfRowOne[i].style.backgroundColor = "#EF0107";
-          buttonsClicked[i].style.backgroundColor = "#EF0107";
-        } else if (guessedWord[i] == randomWord[i]) {
-          squaresOfRowOne[i].style.backgroundColor = "rgb(24, 199, 24)";
-          buttonsClicked[i].style.backgroundColor = "rgb(24, 199, 24)";
+        if (count2 == 1 && randomWord.includes(guessedWord[0]) && guessedWord[_i7] !== randomWord[_i7]) {
+          squaresOfRowOne[_i7].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 2 && randomWord.includes(guessedWord[1]) && guessedWord[_i7] !== randomWord[_i7]) {
+          squaresOfRowOne[_i7].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 3 && randomWord.includes(guessedWord[2]) && guessedWord[_i7] !== randomWord[_i7]) {
+          squaresOfRowOne[_i7].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 4 && randomWord.includes(guessedWord[3]) && guessedWord[_i7] !== randomWord[_i7]) {
+          squaresOfRowOne[_i7].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
+        } else if (guessedWord[_i7] !== randomWord[_i7]) {
+          squaresOfRowOne[_i7].style.backgroundColor = "#EF0107";
+          buttonsClicked[_i7].style.backgroundColor = "#EF0107";
+        } else if (guessedWord[_i7] == randomWord[_i7]) {
+          squaresOfRowOne[_i7].style.backgroundColor = "rgb(24, 199, 24)";
+          buttonsClicked[_i7].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
     }
   } else if (count3 == 1) {
     var _guessedWord = letters.toString().replaceAll(",", "");
 
-    for (var _i6 = 0; _i6 < _guessedWord.length; _i6++) {
+    for (var _i8 = 0; _i8 < _guessedWord.length; _i8++) {
       count2 += 1;
 
       for (var _j = 0; _j < randomWord.length; _j++) {
-        if (count2 == 1 && randomWord.includes(_guessedWord[0]) && _guessedWord[_i6] !== randomWord[_i6]) {
-          squaresOfRowTwo[_i6].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i6].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 2 && randomWord.includes(_guessedWord[1]) && _guessedWord[_i6] !== randomWord[_i6]) {
-          squaresOfRowTwo[_i6].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i6].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 3 && randomWord.includes(_guessedWord[2]) && _guessedWord[_i6] !== randomWord[_i6]) {
-          squaresOfRowTwo[_i6].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i6].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 4 && randomWord.includes(_guessedWord[3]) && _guessedWord[_i6] !== randomWord[_i6]) {
-          squaresOfRowTwo[_i6].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i6].style.backgroundColor = "#FFAC1C";
-        } else if (_guessedWord[_i6] !== randomWord[_i6]) {
-          squaresOfRowTwo[_i6].style.backgroundColor = "#EF0107";
-          buttonsClicked[_i6].style.backgroundColor = "#EF0107";
-        } else if (_guessedWord[_i6] == randomWord[_i6]) {
-          squaresOfRowTwo[_i6].style.backgroundColor = "rgb(24, 199, 24)";
-          buttonsClicked[_i6].style.backgroundColor = "rgb(24, 199, 24)";
+        if (count2 == 1 && randomWord.includes(_guessedWord[0]) && _guessedWord[_i8] !== randomWord[_i8]) {
+          squaresOfRowTwo[_i8].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 2 && randomWord.includes(_guessedWord[1]) && _guessedWord[_i8] !== randomWord[_i8]) {
+          squaresOfRowTwo[_i8].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 3 && randomWord.includes(_guessedWord[2]) && _guessedWord[_i8] !== randomWord[_i8]) {
+          squaresOfRowTwo[_i8].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 4 && randomWord.includes(_guessedWord[3]) && _guessedWord[_i8] !== randomWord[_i8]) {
+          squaresOfRowTwo[_i8].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
+        } else if (_guessedWord[_i8] !== randomWord[_i8]) {
+          squaresOfRowTwo[_i8].style.backgroundColor = "#EF0107";
+          buttonsClicked[_i8].style.backgroundColor = "#EF0107";
+        } else if (_guessedWord[_i8] == randomWord[_i8]) {
+          squaresOfRowTwo[_i8].style.backgroundColor = "rgb(24, 199, 24)";
+          buttonsClicked[_i8].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
     }
   } else if (count3 == 2) {
     var _guessedWord2 = letters.toString().replaceAll(",", "");
 
-    for (var _i7 = 0; _i7 < _guessedWord2.length; _i7++) {
+    for (var _i9 = 0; _i9 < _guessedWord2.length; _i9++) {
       count2 += 1;
 
       for (var _j2 = 0; _j2 < randomWord.length; _j2++) {
-        if (count2 == 1 && randomWord.includes(_guessedWord2[0]) && _guessedWord2[_i7] !== randomWord[_i7]) {
-          squaresOfRowThree[_i7].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 2 && randomWord.includes(_guessedWord2[1]) && _guessedWord2[_i7] !== randomWord[_i7]) {
-          squaresOfRowThree[_i7].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 3 && randomWord.includes(_guessedWord2[2]) && _guessedWord2[_i7] !== randomWord[_i7]) {
-          squaresOfRowThree[_i7].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 4 && randomWord.includes(_guessedWord2[3]) && _guessedWord2[_i7] !== randomWord[_i7]) {
-          squaresOfRowThree[_i7].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
-        } else if (_guessedWord2[_i7] !== randomWord[_i7]) {
-          squaresOfRowThree[_i7].style.backgroundColor = "#EF0107";
-          buttonsClicked[_i7].style.backgroundColor = "#EF0107";
-        } else if (_guessedWord2[_i7] == randomWord[_i7]) {
-          squaresOfRowThree[_i7].style.backgroundColor = "rgb(24, 199, 24)";
-          buttonsClicked[_i7].style.backgroundColor = "rgb(24, 199, 24)";
+        if (count2 == 1 && randomWord.includes(_guessedWord2[0]) && _guessedWord2[_i9] !== randomWord[_i9]) {
+          squaresOfRowThree[_i9].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 2 && randomWord.includes(_guessedWord2[1]) && _guessedWord2[_i9] !== randomWord[_i9]) {
+          squaresOfRowThree[_i9].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 3 && randomWord.includes(_guessedWord2[2]) && _guessedWord2[_i9] !== randomWord[_i9]) {
+          squaresOfRowThree[_i9].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 4 && randomWord.includes(_guessedWord2[3]) && _guessedWord2[_i9] !== randomWord[_i9]) {
+          squaresOfRowThree[_i9].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
+        } else if (_guessedWord2[_i9] !== randomWord[_i9]) {
+          squaresOfRowThree[_i9].style.backgroundColor = "#EF0107";
+          buttonsClicked[_i9].style.backgroundColor = "#EF0107";
+        } else if (_guessedWord2[_i9] == randomWord[_i9]) {
+          squaresOfRowThree[_i9].style.backgroundColor = "rgb(24, 199, 24)";
+          buttonsClicked[_i9].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
     }
   } else if (count3 == 3) {
     var _guessedWord3 = letters.toString().replaceAll(",", "");
 
-    for (var _i8 = 0; _i8 < _guessedWord3.length; _i8++) {
+    for (var _i10 = 0; _i10 < _guessedWord3.length; _i10++) {
       count2 += 1;
 
       for (var _j3 = 0; _j3 < randomWord.length; _j3++) {
-        if (count2 == 1 && randomWord.includes(_guessedWord3[0]) && _guessedWord3[_i8] !== randomWord[_i8]) {
-          squaresOfRowFour[_i8].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 2 && randomWord.includes(_guessedWord3[1]) && _guessedWord3[_i8] !== randomWord[_i8]) {
-          squaresOfRowFour[_i8].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 3 && randomWord.includes(_guessedWord3[2]) && _guessedWord3[_i8] !== randomWord[_i8]) {
-          squaresOfRowFour[_i8].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 4 && randomWord.includes(_guessedWord3[3]) && _guessedWord3[_i8] !== randomWord[_i8]) {
-          squaresOfRowFour[_i8].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
-        } else if (_guessedWord3[_i8] !== randomWord[_i8]) {
-          squaresOfRowFour[_i8].style.backgroundColor = "#EF0107";
-          buttonsClicked[_i8].style.backgroundColor = "#EF0107";
-        } else if (_guessedWord3[_i8] == randomWord[_i8]) {
-          squaresOfRowFour[_i8].style.backgroundColor = "rgb(24, 199, 24)";
-          buttonsClicked[_i8].style.backgroundColor = "rgb(24, 199, 24)";
+        if (count2 == 1 && randomWord.includes(_guessedWord3[0]) && _guessedWord3[_i10] !== randomWord[_i10]) {
+          squaresOfRowFour[_i10].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i10].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 2 && randomWord.includes(_guessedWord3[1]) && _guessedWord3[_i10] !== randomWord[_i10]) {
+          squaresOfRowFour[_i10].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i10].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 3 && randomWord.includes(_guessedWord3[2]) && _guessedWord3[_i10] !== randomWord[_i10]) {
+          squaresOfRowFour[_i10].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i10].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 4 && randomWord.includes(_guessedWord3[3]) && _guessedWord3[_i10] !== randomWord[_i10]) {
+          squaresOfRowFour[_i10].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i10].style.backgroundColor = "#FFAC1C";
+        } else if (_guessedWord3[_i10] !== randomWord[_i10]) {
+          squaresOfRowFour[_i10].style.backgroundColor = "#EF0107";
+          buttonsClicked[_i10].style.backgroundColor = "#EF0107";
+        } else if (_guessedWord3[_i10] == randomWord[_i10]) {
+          squaresOfRowFour[_i10].style.backgroundColor = "rgb(24, 199, 24)";
+          buttonsClicked[_i10].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
     }
   } else if (count3 == 4) {
     var _guessedWord4 = letters.toString().replaceAll(",", "");
 
-    for (var _i9 = 0; _i9 < _guessedWord4.length; _i9++) {
+    for (var _i11 = 0; _i11 < _guessedWord4.length; _i11++) {
       count2 += 1;
 
       for (var _j4 = 0; _j4 < randomWord.length; _j4++) {
-        if (count2 == 1 && randomWord.includes(_guessedWord4[0]) && _guessedWord4[_i9] !== randomWord[_i9]) {
-          squaresOfRowFive[_i9].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 2 && randomWord.includes(_guessedWord4[1]) && _guessedWord4[_i9] !== randomWord[_i9]) {
-          squaresOfRowFive[_i9].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 3 && randomWord.includes(_guessedWord4[2]) && _guessedWord4[_i9] !== randomWord[_i9]) {
-          squaresOfRowFive[_i9].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
-        } else if (count2 == 4 && randomWord.includes(_guessedWord4[3]) && _guessedWord4[_i9] !== randomWord[_i9]) {
-          squaresOfRowFive[_i9].style.backgroundColor = "#FFAC1C";
-          buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
-        } else if (_guessedWord4[_i9] !== randomWord[_i9]) {
-          squaresOfRowFive[_i9].style.backgroundColor = "#EF0107";
-          buttonsClicked[_i9].style.backgroundColor = "#EF0107";
-        } else if (_guessedWord4[_i9] == randomWord[_i9]) {
-          squaresOfRowFive[_i9].style.backgroundColor = "rgb(24, 199, 24)";
-          buttonsClicked[_i9].style.backgroundColor = "rgb(24, 199, 24)";
+        if (count2 == 1 && randomWord.includes(_guessedWord4[0]) && _guessedWord4[_i11] !== randomWord[_i11]) {
+          squaresOfRowFive[_i11].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i11].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 2 && randomWord.includes(_guessedWord4[1]) && _guessedWord4[_i11] !== randomWord[_i11]) {
+          squaresOfRowFive[_i11].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i11].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 3 && randomWord.includes(_guessedWord4[2]) && _guessedWord4[_i11] !== randomWord[_i11]) {
+          squaresOfRowFive[_i11].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i11].style.backgroundColor = "#FFAC1C";
+        } else if (count2 == 4 && randomWord.includes(_guessedWord4[3]) && _guessedWord4[_i11] !== randomWord[_i11]) {
+          squaresOfRowFive[_i11].style.backgroundColor = "#FFAC1C";
+          buttonsClicked[_i11].style.backgroundColor = "#FFAC1C";
+        } else if (_guessedWord4[_i11] !== randomWord[_i11]) {
+          squaresOfRowFive[_i11].style.backgroundColor = "#EF0107";
+          buttonsClicked[_i11].style.backgroundColor = "#EF0107";
+        } else if (_guessedWord4[_i11] == randomWord[_i11]) {
+          squaresOfRowFive[_i11].style.backgroundColor = "rgb(24, 199, 24)";
+          buttonsClicked[_i11].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
     }
