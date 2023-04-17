@@ -1043,23 +1043,28 @@ newGameBtn.addEventListener("click", () => {
   }
   for (let i = 0; i < squaresOfRowOne.length; i++) {
     squaresOfRowOne[i].innerHTML = "";
-    squaresOfRowOne[i].style.backgroundColor = "#6b6a6a";
+    squaresOfRowOne[i].style.backgroundColor = "#3e3d3d";
+    squaresOfRowOne[i].style.border = "2px solid #a8a7a7";
   }
   for (let i = 0; i < squaresOfRowTwo.length; i++) {
     squaresOfRowTwo[i].innerHTML = "";
-    squaresOfRowTwo[i].style.backgroundColor = "#6b6a6a";
+    squaresOfRowTwo[i].style.backgroundColor = "#3e3d3d";
+    squaresOfRowTwo[i].style.border = "2px solid #a8a7a7";
   }
   for (let i = 0; i < squaresOfRowThree.length; i++) {
     squaresOfRowThree[i].innerHTML = "";
-    squaresOfRowThree[i].style.backgroundColor = "#6b6a6a";
+    squaresOfRowThree[i].style.backgroundColor = "#3e3d3d";
+    squaresOfRowThree[i].style.border = "2px solid #a8a7a7";
   }
   for (let i = 0; i < squaresOfRowFour.length; i++) {
     squaresOfRowFour[i].innerHTML = "";
-    squaresOfRowFour[i].style.backgroundColor = "#6b6a6a";
+    squaresOfRowFour[i].style.backgroundColor = "#3e3d3d";
+    squaresOfRowFour[i].style.border = "2px solid #a8a7a7";
   }
   for (let i = 0; i < squaresOfRowFive.length; i++) {
     squaresOfRowFive[i].innerHTML = "";
-    squaresOfRowFive[i].style.backgroundColor = "#6b6a6a";
+    squaresOfRowFive[i].style.backgroundColor = "#3e3d3d";
+    squaresOfRowFive[i].style.border = "2px solid #a8a7a7";
   }
 });
 
@@ -1076,106 +1081,115 @@ const displayClickedLetter = () => {
   switch (count) {
     case 0:
       squaresOfRowOne[0].innerHTML = letters[0];
+      squaresOfRowOne[0].style.border = "2px solid white";
       break;
     case 1:
       squaresOfRowOne[1].innerHTML = letters[1];
+      squaresOfRowOne[1].style.border = "2px solid white";
       break;
     case 2:
       squaresOfRowOne[2].innerHTML = letters[2];
+      squaresOfRowOne[2].style.border = "2px solid white";
       break;
     case 3:
       squaresOfRowOne[3].innerHTML = letters[3];
+      squaresOfRowOne[3].style.border = "2px solid white";
       break;
     case 4:
       if(count3 == 1){
         squaresOfRowTwo[0].innerHTML = letters[0];
-      } else {
-        wrong.innerHTML = "Only four letters, please."
+        squaresOfRowTwo[0].style.border = "2px solid white";
+
       }
       break;
     case 5:
       if(count3 ==1){
         squaresOfRowTwo[1].innerHTML = letters[1];
+        squaresOfRowTwo[1].style.border = "2px solid white";
       }
       
       break;
     case 6:
       if(count3 ==1){
         squaresOfRowTwo[2].innerHTML = letters[2];
+        squaresOfRowTwo[2].style.border = "2px solid white";
       }
-     
       break;
     case 7:
       if(count3 == 1){
         squaresOfRowTwo[3].innerHTML = letters[3];
+        squaresOfRowTwo[3].style.border = "2px solid white";
       }
-      
       break;
     case 8:
       if(count3 == 2){
         squaresOfRowThree[0].innerHTML = letters[0];
-      } else {
-        wrong.innerHTML = "Only four letters, please."
+        squaresOfRowThree[0].style.border = "2px solid white";
       }
-      
       break;
     case 9:
       if(count3 == 2){
         squaresOfRowThree[1].innerHTML = letters[1];
+        squaresOfRowThree[1].style.border = "2px solid white";
       }
       break;
     case 10:
       if(count3 == 2){
         squaresOfRowThree[2].innerHTML = letters[2];
+        squaresOfRowThree[2].style.border = "2px solid white";
       }
       break;
     case 11:
       if(count3 == 2){
         squaresOfRowThree[3].innerHTML = letters[3];
+        squaresOfRowThree[3].style.border = "2px solid white";
       }
       break;
     case 12:
       if(count3 == 3){
         squaresOfRowFour[0].innerHTML = letters[0];
-      } else {
-        wrong.innerHTML = "Only four letters, please."
+        squaresOfRowFour[0].style.border = "2px solid white";
       }
       break;
     case 13:
       if(count3 == 3){
         squaresOfRowFour[1].innerHTML = letters[1];
+        squaresOfRowFour[1].style.border = "2px solid white";
       }
       break;
     case 14:
       if(count3 == 3){
         squaresOfRowFour[2].innerHTML = letters[2];
+        squaresOfRowFour[2].style.border = "2px solid white";
       }
       break;
     case 15:
       if(count3 == 3){
         squaresOfRowFour[3].innerHTML = letters[3];
+        squaresOfRowFour[3].style.border = "2px solid white";
       }
       break;
     case 16:
       if(count3 == 4){
         squaresOfRowFive[0].innerHTML = letters[0];
-      } else {
-        wrong.innerHTML = "Only four letters, please."
+        squaresOfRowFive[0].style.border = "2px solid white";
       }
       break;
     case 17:
       if(count3 == 4){
         squaresOfRowFive[1].innerHTML = letters[1];
+        squaresOfRowFive[1].style.border = "2px solid white";
       }
       break;
     case 18:
       if(count3 == 4){
         squaresOfRowFive[2].innerHTML = letters[2];
+        squaresOfRowFive[2].style.border = "2px solid white";
       }
       break;
     case 19:
         squaresOfRowFive[3].innerHTML = letters[3];
-        console.log(letters[i]);
+        squaresOfRowFive[3].style.border = "2px solid white";
       break;
 
     // default:
@@ -1188,18 +1202,21 @@ const deleteDisplayedLetter = () => {
   switch (count) {
     case 1:
       squaresOfRowOne[0].innerHTML = "";
+      squaresOfRowOne[0].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 2:
       squaresOfRowOne[1].innerHTML = "";
+      squaresOfRowOne[1].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 3:
       squaresOfRowOne[2].innerHTML = "";
+      squaresOfRowOne[2].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -1207,6 +1224,7 @@ const deleteDisplayedLetter = () => {
       break;
     case 4:
       squaresOfRowOne[3].innerHTML = "";
+      squaresOfRowOne[3].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -1215,24 +1233,28 @@ const deleteDisplayedLetter = () => {
       break;
     case 5:
       squaresOfRowTwo[0].innerHTML = "";
+      squaresOfRowTwo[0].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 6:
       squaresOfRowTwo[1].innerHTML = "";
+      squaresOfRowTwo[1].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 7:
       squaresOfRowTwo[2].innerHTML = "";
+      squaresOfRowTwo[2].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 8:
       squaresOfRowTwo[3].innerHTML = "";
+      squaresOfRowTwo[3].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -1240,24 +1262,28 @@ const deleteDisplayedLetter = () => {
       break;
     case 9:
       squaresOfRowThree[0].innerHTML = "";
+      squaresOfRowThree[0].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 10:
       squaresOfRowThree[1].innerHTML = "";
+      squaresOfRowThree[1].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 11:
       squaresOfRowThree[2].innerHTML = "";
+      squaresOfRowThree[2].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 12:
       squaresOfRowThree[3].innerHTML = "";
+      squaresOfRowThree[3].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -1265,24 +1291,28 @@ const deleteDisplayedLetter = () => {
       break;
     case 13:
       squaresOfRowFour[0].innerHTML = "";
+      squaresOfRowFour[0].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 14:
       squaresOfRowFour[1].innerHTML = "";
+      squaresOfRowFour[1].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 15:
       squaresOfRowFour[2].innerHTML = "";
+      squaresOfRowFour[2].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 16:
       squaresOfRowFour[3].innerHTML = "";
+      squaresOfRowFour[3].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -1290,24 +1320,28 @@ const deleteDisplayedLetter = () => {
       break;
     case 17:
       squaresOfRowFive[0].innerHTML = "";
+      squaresOfRowFive[0].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 18:
       squaresOfRowFive[1].innerHTML = "";
+      squaresOfRowFive[1].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 19:
       squaresOfRowFive[2].innerHTML = "";
+      squaresOfRowFive[2].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
       break;
     case 20:
       squaresOfRowFive[3].innerHTML = "";
+      squaresOfRowFive[3].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -1315,6 +1349,7 @@ const deleteDisplayedLetter = () => {
       break;
     case 21:
       squaresOfRowFive[3].innerHTML = "";
+      squaresOfRowFive[3].style.border = "2px solid #a8a7a7";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
