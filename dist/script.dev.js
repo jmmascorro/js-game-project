@@ -42,31 +42,36 @@ newGameBtn.addEventListener("click", function () {
   for (var _i = 0; _i < squaresOfRowOne.length; _i++) {
     squaresOfRowOne[_i].innerHTML = "";
     squaresOfRowOne[_i].style.backgroundColor = "#3e3d3d";
-    squaresOfRowOne[_i].style = "border: 2px solid #a8a7a7 !important";
+    squaresOfRowOne[_i].style = "transform: rotateY(360deg)";
+    squaresOfRowOne[_i].style = "transition: 1.5s"; // squaresOfRowOne[i].style = "border: 2px solid #a8a7a7";
   }
 
   for (var _i2 = 0; _i2 < squaresOfRowTwo.length; _i2++) {
     squaresOfRowTwo[_i2].innerHTML = "";
     squaresOfRowTwo[_i2].style.backgroundColor = "#3e3d3d";
-    squaresOfRowTwo[_i2].style = "border: 2px solid #a8a7a7 !important";
+    squaresOfRowTwo[_i2].style = "transform: rotateY(360deg)";
+    squaresOfRowTwo[_i2].style = "transition: 1.5s"; // squaresOfRowTwo[i].style = "border: 2px solid #a8a7a7 !important";
   }
 
   for (var _i3 = 0; _i3 < squaresOfRowThree.length; _i3++) {
     squaresOfRowThree[_i3].innerHTML = "";
     squaresOfRowThree[_i3].style.backgroundColor = "#3e3d3d";
-    squaresOfRowThree[_i3].style = "border: 2px solid #a8a7a7 !important";
+    squaresOfRowThree[_i3].style = "transform: rotateY(360deg)";
+    squaresOfRowThree[_i3].style = "transition: 1.5s"; // squaresOfRowThree[i].style = "border: 2px solid #a8a7a7 !important";
   }
 
   for (var _i4 = 0; _i4 < squaresOfRowFour.length; _i4++) {
     squaresOfRowFour[_i4].innerHTML = "";
     squaresOfRowFour[_i4].style.backgroundColor = "#3e3d3d";
-    squaresOfRowFour[_i4].style = "border: 2px solid #a8a7a7 !important";
+    squaresOfRowFour[_i4].style = "transform: rotateY(360deg)";
+    squaresOfRowFour[_i4].style = "transition: 1.5s"; // squaresOfRowFour[i].style = "border: 2px solid #a8a7a7 !important";
   }
 
   for (var _i5 = 0; _i5 < squaresOfRowFive.length; _i5++) {
     squaresOfRowFive[_i5].innerHTML = "";
     squaresOfRowFive[_i5].style.backgroundColor = "#3e3d3d";
-    squaresOfRowFive[_i5].style = "border: 2px solid #a8a7a7 !important";
+    squaresOfRowFive[_i5].style = "transform: rotateY(360deg)";
+    squaresOfRowFive[_i5].style = "transition: 1.5s"; // squaresOfRowFive[i].style = "border: 2px solid #a8a7a7 !important";
   }
 });
 
@@ -456,27 +461,33 @@ var wordChecker = function wordChecker() {
       for (var j = 0; j < randomWord.length; j++) {
         if (count2 == 1 && randomWord.includes(guessedWord[0]) && guessedWord[i] !== randomWord[i]) {
           squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
-          squaresOfRowOne[i].style.transition = "0.8s";
+          squaresOfRowOne[i].style.transform = "rotateY(360deg)";
+          squaresOfRowOne[i].style.transition = "1.5s";
           buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 2 && randomWord.includes(guessedWord[1]) && guessedWord[i] !== randomWord[i]) {
           squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
-          squaresOfRowOne[i].style.transition = "0.8s";
+          squaresOfRowOne[i].style.transform = "rotateY(360deg)";
+          squaresOfRowOne[i].style.transition = "1.5s";
           buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 3 && randomWord.includes(guessedWord[2]) && guessedWord[i] !== randomWord[i]) {
           squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
-          squaresOfRowOne[i].style.transition = "0.8s";
+          squaresOfRowOne[i].style.transform = "rotateY(360deg)";
+          squaresOfRowOne[i].style.transition = "1.5s";
           buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 4 && randomWord.includes(guessedWord[3]) && guessedWord[i] !== randomWord[i]) {
           squaresOfRowOne[i].style.backgroundColor = "#FFAC1C";
-          squaresOfRowOne[i].style.transition = "0.8s";
+          squaresOfRowOne[i].style.transform = "rotateY(360deg)";
+          squaresOfRowOne[i].style.transition = "1.5s";
           buttonsClicked[i].style.backgroundColor = "#FFAC1C";
         } else if (guessedWord[i] !== randomWord[i]) {
           squaresOfRowOne[i].style.backgroundColor = "#EF0107";
-          squaresOfRowOne[i].style.transition = "0.8s";
+          squaresOfRowOne[i].style.transform = "rotateY(360deg)";
+          squaresOfRowOne[i].style.transition = "1.5s";
           buttonsClicked[i].style.backgroundColor = "#EF0107";
         } else if (guessedWord[i] == randomWord[i]) {
           squaresOfRowOne[i].style.backgroundColor = "rgb(24, 199, 24)";
-          squaresOfRowOne[i].style.transition = "0.8s";
+          squaresOfRowOne[i].style.transform = "rotateY(360deg)";
+          squaresOfRowOne[i].style.transition = "1.5s";
           buttonsClicked[i].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
@@ -490,27 +501,33 @@ var wordChecker = function wordChecker() {
       for (var _j = 0; _j < randomWord.length; _j++) {
         if (count2 == 1 && randomWord.includes(_guessedWord[0]) && _guessedWord[_i6] !== randomWord[_i6]) {
           squaresOfRowTwo[_i6].style.backgroundColor = "#FFAC1C";
-          squaresOfRowTwo[_i6].style.transition = "0.8s";
+          squaresOfRowTwo[_i6].style.transform = "rotateY(360deg)";
+          squaresOfRowTwo[_i6].style.transition = "1.5s";
           buttonsClicked[_i6].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 2 && randomWord.includes(_guessedWord[1]) && _guessedWord[_i6] !== randomWord[_i6]) {
           squaresOfRowTwo[_i6].style.backgroundColor = "#FFAC1C";
-          squaresOfRowTwo[_i6].style.transition = "0.8s";
+          squaresOfRowTwo[_i6].style.transform = "rotateY(360deg)";
+          squaresOfRowTwo[_i6].style.transition = "1.5s";
           buttonsClicked[_i6].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 3 && randomWord.includes(_guessedWord[2]) && _guessedWord[_i6] !== randomWord[_i6]) {
           squaresOfRowTwo[_i6].style.backgroundColor = "#FFAC1C";
-          squaresOfRowTwo[_i6].style.transition = "0.8s";
+          squaresOfRowTwo[_i6].style.transform = "rotateY(360deg)";
+          squaresOfRowTwo[_i6].style.transition = "1.5s";
           buttonsClicked[_i6].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 4 && randomWord.includes(_guessedWord[3]) && _guessedWord[_i6] !== randomWord[_i6]) {
           squaresOfRowTwo[_i6].style.backgroundColor = "#FFAC1C";
-          squaresOfRowTwo[_i6].style.transition = "0.8s";
+          squaresOfRowTwo[_i6].style.transform = "rotateY(360deg)";
+          squaresOfRowTwo[_i6].style.transition = "1.5s";
           buttonsClicked[_i6].style.backgroundColor = "#FFAC1C";
         } else if (_guessedWord[_i6] !== randomWord[_i6]) {
           squaresOfRowTwo[_i6].style.backgroundColor = "#EF0107";
-          squaresOfRowTwo[_i6].style.transition = "0.8s";
+          squaresOfRowTwo[_i6].style.transform = "rotateY(360deg)";
+          squaresOfRowTwo[_i6].style.transition = "1.5s";
           buttonsClicked[_i6].style.backgroundColor = "#EF0107";
         } else if (_guessedWord[_i6] == randomWord[_i6]) {
           squaresOfRowTwo[_i6].style.backgroundColor = "rgb(24, 199, 24)";
-          squaresOfRowTwo[_i6].style.transition = "0.8s";
+          squaresOfRowTwo[_i6].style.transform = "rotateY(360deg)";
+          squaresOfRowTwo[_i6].style.transition = "1.5s";
           buttonsClicked[_i6].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
@@ -524,27 +541,33 @@ var wordChecker = function wordChecker() {
       for (var _j2 = 0; _j2 < randomWord.length; _j2++) {
         if (count2 == 1 && randomWord.includes(_guessedWord2[0]) && _guessedWord2[_i7] !== randomWord[_i7]) {
           squaresOfRowThree[_i7].style.backgroundColor = "#FFAC1C";
-          squaresOfRowThree[_i7].style.transition = "0.8s";
+          squaresOfRowThree[_i7].style.transform = "rotateY(360deg)";
+          squaresOfRowThree[_i7].style.transition = "1.5s";
           buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 2 && randomWord.includes(_guessedWord2[1]) && _guessedWord2[_i7] !== randomWord[_i7]) {
           squaresOfRowThree[_i7].style.backgroundColor = "#FFAC1C";
-          squaresOfRowThree[_i7].style.transition = "0.8s";
+          squaresOfRowThree[_i7].style.transform = "rotateY(360deg)";
+          squaresOfRowThree[_i7].style.transition = "1.5s";
           buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 3 && randomWord.includes(_guessedWord2[2]) && _guessedWord2[_i7] !== randomWord[_i7]) {
           squaresOfRowThree[_i7].style.backgroundColor = "#FFAC1C";
-          squaresOfRowThree[_i7].style.transition = "0.8s";
+          squaresOfRowThree[_i7].style.transform = "rotateY(360deg)";
+          squaresOfRowThree[_i7].style.transition = "1.5s";
           buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 4 && randomWord.includes(_guessedWord2[3]) && _guessedWord2[_i7] !== randomWord[_i7]) {
           squaresOfRowThree[_i7].style.backgroundColor = "#FFAC1C";
-          squaresOfRowThree[_i7].style.transition = "0.8s";
+          squaresOfRowThree[_i7].style.transform = "rotateY(360deg)";
+          squaresOfRowThree[_i7].style.transition = "1.5s";
           buttonsClicked[_i7].style.backgroundColor = "#FFAC1C";
         } else if (_guessedWord2[_i7] !== randomWord[_i7]) {
           squaresOfRowThree[_i7].style.backgroundColor = "#EF0107";
-          squaresOfRowThree[_i7].style.transition = "0.8s";
+          squaresOfRowThree[_i7].style.transform = "rotateY(360deg)";
+          squaresOfRowThree[_i7].style.transition = "1.5s";
           buttonsClicked[_i7].style.backgroundColor = "#EF0107";
         } else if (_guessedWord2[_i7] == randomWord[_i7]) {
           squaresOfRowThree[_i7].style.backgroundColor = "rgb(24, 199, 24)";
-          squaresOfRowThree[_i7].style.transition = "0.8s";
+          squaresOfRowThree[_i7].style.transform = "rotateY(360deg)";
+          squaresOfRowThree[_i7].style.transition = "1.5s";
           buttonsClicked[_i7].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
@@ -558,27 +581,33 @@ var wordChecker = function wordChecker() {
       for (var _j3 = 0; _j3 < randomWord.length; _j3++) {
         if (count2 == 1 && randomWord.includes(_guessedWord3[0]) && _guessedWord3[_i8] !== randomWord[_i8]) {
           squaresOfRowFour[_i8].style.backgroundColor = "#FFAC1C";
-          squaresOfRowFour[_i8].style.transition = "0.8s";
+          squaresOfRowFour[_i8].style.transform = "rotateY(360deg)";
+          squaresOfRowFour[_i8].style.transition = "1.5s";
           buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 2 && randomWord.includes(_guessedWord3[1]) && _guessedWord3[_i8] !== randomWord[_i8]) {
           squaresOfRowFour[_i8].style.backgroundColor = "#FFAC1C";
-          squaresOfRowFour[_i8].style.transition = "0.8s";
+          squaresOfRowFour[_i8].style.transform = "rotateY(360deg)";
+          squaresOfRowFour[_i8].style.transition = "1.5s";
           buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 3 && randomWord.includes(_guessedWord3[2]) && _guessedWord3[_i8] !== randomWord[_i8]) {
           squaresOfRowFour[_i8].style.backgroundColor = "#FFAC1C";
-          squaresOfRowFour[_i8].style.transition = "0.8s";
+          squaresOfRowFour[_i8].style.transform = "rotateY(360deg)";
+          squaresOfRowFour[_i8].style.transition = "1.5s";
           buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 4 && randomWord.includes(_guessedWord3[3]) && _guessedWord3[_i8] !== randomWord[_i8]) {
           squaresOfRowFour[_i8].style.backgroundColor = "#FFAC1C";
-          squaresOfRowFour[_i8].style.transition = "0.8s";
+          squaresOfRowFour[_i8].style.transform = "rotateY(360deg)";
+          squaresOfRowFour[_i8].style.transition = "1.5s";
           buttonsClicked[_i8].style.backgroundColor = "#FFAC1C";
         } else if (_guessedWord3[_i8] !== randomWord[_i8]) {
           squaresOfRowFour[_i8].style.backgroundColor = "#EF0107";
-          squaresOfRowFour[_i8].style.transition = "0.8s";
+          squaresOfRowFour[_i8].style.transform = "rotateY(360deg)";
+          squaresOfRowFour[_i8].style.transition = "1.5s";
           buttonsClicked[_i8].style.backgroundColor = "#EF0107";
         } else if (_guessedWord3[_i8] == randomWord[_i8]) {
           squaresOfRowFour[_i8].style.backgroundColor = "rgb(24, 199, 24)";
-          squaresOfRowFour[_i8].style.transition = "0.8s";
+          squaresOfRowFour[_i8].style.transform = "rotateY(360deg)";
+          squaresOfRowFour[_i8].style.transition = "1.5s";
           buttonsClicked[_i8].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
@@ -592,27 +621,33 @@ var wordChecker = function wordChecker() {
       for (var _j4 = 0; _j4 < randomWord.length; _j4++) {
         if (count2 == 1 && randomWord.includes(_guessedWord4[0]) && _guessedWord4[_i9] !== randomWord[_i9]) {
           squaresOfRowFive[_i9].style.backgroundColor = "#FFAC1C";
-          squaresOfRowFive[_i9].style.transition = "0.8s";
+          squaresOfRowFive[_i9].style.transform = "rotateY(360deg)";
+          squaresOfRowFive[_i9].style.transition = "1.5s";
           buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 2 && randomWord.includes(_guessedWord4[1]) && _guessedWord4[_i9] !== randomWord[_i9]) {
           squaresOfRowFive[_i9].style.backgroundColor = "#FFAC1C";
-          squaresOfRowFive[_i9].style.transition = "0.8s";
+          squaresOfRowFive[_i9].style.transform = "rotateY(360deg)";
+          squaresOfRowFive[_i9].style.transition = "1.5s";
           buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 3 && randomWord.includes(_guessedWord4[2]) && _guessedWord4[_i9] !== randomWord[_i9]) {
           squaresOfRowFive[_i9].style.backgroundColor = "#FFAC1C";
-          squaresOfRowFive[_i9].style.transition = "0.8s";
+          squaresOfRowFive[_i9].style.transform = "rotateY(360deg)";
+          squaresOfRowFive[_i9].style.transition = "1.5s";
           buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
         } else if (count2 == 4 && randomWord.includes(_guessedWord4[3]) && _guessedWord4[_i9] !== randomWord[_i9]) {
           squaresOfRowFive[_i9].style.backgroundColor = "#FFAC1C";
-          squaresOfRowFive[_i9].style.transition = "0.8s";
+          squaresOfRowFive[_i9].style.transform = "rotateY(360deg)";
+          squaresOfRowFive[_i9].style.transition = "1.5s";
           buttonsClicked[_i9].style.backgroundColor = "#FFAC1C";
         } else if (_guessedWord4[_i9] !== randomWord[_i9]) {
           squaresOfRowFive[_i9].style.backgroundColor = "#EF0107";
-          squaresOfRowFive[_i9].style.transition = "0.8s";
+          squaresOfRowFive[_i9].style.transform = "rotateY(360deg)";
+          squaresOfRowFive[_i9].style.transition = "1.5s";
           buttonsClicked[_i9].style.backgroundColor = "#EF0107";
         } else if (_guessedWord4[_i9] == randomWord[_i9]) {
           squaresOfRowFive[_i9].style.backgroundColor = "rgb(24, 199, 24)";
-          squaresOfRowFive[_i9].style.transition = "0.8s";
+          squaresOfRowFive[_i9].style.transform = "rotateY(360deg)";
+          squaresOfRowFive[_i9].style.transition = "1.5s";
           buttonsClicked[_i9].style.backgroundColor = "rgb(24, 199, 24)";
         }
       }
