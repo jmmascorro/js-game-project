@@ -42,31 +42,31 @@ newGameBtn.addEventListener("click", function () {
   for (var _i = 0; _i < squaresOfRowOne.length; _i++) {
     squaresOfRowOne[_i].innerHTML = "";
     squaresOfRowOne[_i].style.backgroundColor = "#3e3d3d";
-    squaresOfRowOne[_i].style.border = "2px solid #a8a7a7";
+    squaresOfRowOne[_i].style = "border: 2px solid #a8a7a7 !important";
   }
 
   for (var _i2 = 0; _i2 < squaresOfRowTwo.length; _i2++) {
     squaresOfRowTwo[_i2].innerHTML = "";
     squaresOfRowTwo[_i2].style.backgroundColor = "#3e3d3d";
-    squaresOfRowTwo[_i2].style.border = "2px solid #a8a7a7";
+    squaresOfRowTwo[_i2].style = "border: 2px solid #a8a7a7 !important";
   }
 
   for (var _i3 = 0; _i3 < squaresOfRowThree.length; _i3++) {
     squaresOfRowThree[_i3].innerHTML = "";
     squaresOfRowThree[_i3].style.backgroundColor = "#3e3d3d";
-    squaresOfRowThree[_i3].style.border = "2px solid #a8a7a7";
+    squaresOfRowThree[_i3].style = "border: 2px solid #a8a7a7 !important";
   }
 
   for (var _i4 = 0; _i4 < squaresOfRowFour.length; _i4++) {
     squaresOfRowFour[_i4].innerHTML = "";
     squaresOfRowFour[_i4].style.backgroundColor = "#3e3d3d";
-    squaresOfRowFour[_i4].style.border = "2px solid #a8a7a7";
+    squaresOfRowFour[_i4].style = "border: 2px solid #a8a7a7 !important";
   }
 
   for (var _i5 = 0; _i5 < squaresOfRowFive.length; _i5++) {
     squaresOfRowFive[_i5].innerHTML = "";
     squaresOfRowFive[_i5].style.backgroundColor = "#3e3d3d";
-    squaresOfRowFive[_i5].style.border = "2px solid #a8a7a7";
+    squaresOfRowFive[_i5].style = "border: 2px solid #a8a7a7 !important";
   }
 });
 
@@ -82,148 +82,168 @@ var counter = function counter() {
 var displayClickedLetter = function displayClickedLetter() {
   switch (count) {
     case 0:
-      squaresOfRowOne[0].innerHTML = letters[0];
-      squaresOfRowOne[0].style.border = "2px solid white";
+      squaresOfRowOne[0].innerHTML = letters[0]; // squaresOfRowOne[0].style.border = "2px solid white";
+
+      squaresOfRowOne[0].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       break;
 
     case 1:
-      squaresOfRowOne[1].innerHTML = letters[1];
-      squaresOfRowOne[1].style.border = "2px solid white";
+      squaresOfRowOne[1].innerHTML = letters[1]; // squaresOfRowOne[1].style.border = "2px solid white";
+
+      squaresOfRowOne[1].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       break;
 
     case 2:
-      squaresOfRowOne[2].innerHTML = letters[2];
-      squaresOfRowOne[2].style.border = "2px solid white";
+      squaresOfRowOne[2].innerHTML = letters[2]; // squaresOfRowOne[2].style.border = "2px solid white";
+
+      squaresOfRowOne[2].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       break;
 
     case 3:
-      squaresOfRowOne[3].innerHTML = letters[3];
-      squaresOfRowOne[3].style.border = "2px solid white";
+      squaresOfRowOne[3].innerHTML = letters[3]; // squaresOfRowOne[3].style.border = "2px solid white";
+
+      squaresOfRowOne[3].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       break;
 
     case 4:
       if (count3 == 1) {
-        squaresOfRowTwo[0].innerHTML = letters[0];
-        squaresOfRowTwo[0].style.border = "2px solid white";
+        squaresOfRowTwo[0].innerHTML = letters[0]; // squaresOfRowTwo[0].style.border = "2px solid white";
+
+        squaresOfRowTwo[0].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 5:
       if (count3 == 1) {
-        squaresOfRowTwo[1].innerHTML = letters[1];
-        squaresOfRowTwo[1].style.border = "2px solid white";
+        squaresOfRowTwo[1].innerHTML = letters[1]; // squaresOfRowTwo[1].style.border = "2px solid white";
+
+        squaresOfRowTwo[1].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 6:
       if (count3 == 1) {
-        squaresOfRowTwo[2].innerHTML = letters[2];
-        squaresOfRowTwo[2].style.border = "2px solid white";
+        squaresOfRowTwo[2].innerHTML = letters[2]; // squaresOfRowTwo[2].style.border = "2px solid white";
+
+        squaresOfRowTwo[2].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 7:
       if (count3 == 1) {
-        squaresOfRowTwo[3].innerHTML = letters[3];
-        squaresOfRowTwo[3].style.border = "2px solid white";
+        squaresOfRowTwo[3].innerHTML = letters[3]; // squaresOfRowTwo[3].style.border = "2px solid white";
+
+        squaresOfRowTwo[3].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 8:
       if (count3 == 2) {
-        squaresOfRowThree[0].innerHTML = letters[0];
-        squaresOfRowThree[0].style.border = "2px solid white";
+        squaresOfRowThree[0].innerHTML = letters[0]; // squaresOfRowThree[0].style.border = "2px solid white";
+
+        squaresOfRowThree[0].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 9:
       if (count3 == 2) {
-        squaresOfRowThree[1].innerHTML = letters[1];
-        squaresOfRowThree[1].style.border = "2px solid white";
+        squaresOfRowThree[1].innerHTML = letters[1]; // squaresOfRowThree[1].style.border = "2px solid white";
+
+        squaresOfRowThree[1].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 10:
       if (count3 == 2) {
-        squaresOfRowThree[2].innerHTML = letters[2];
-        squaresOfRowThree[2].style.border = "2px solid white";
+        squaresOfRowThree[2].innerHTML = letters[2]; // squaresOfRowThree[2].style.border = "2px solid white";
+
+        squaresOfRowThree[2].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 11:
       if (count3 == 2) {
-        squaresOfRowThree[3].innerHTML = letters[3];
-        squaresOfRowThree[3].style.border = "2px solid white";
+        squaresOfRowThree[3].innerHTML = letters[3]; // squaresOfRowThree[3].style.border = "2px solid white";
+
+        squaresOfRowThree[3].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 12:
       if (count3 == 3) {
-        squaresOfRowFour[0].innerHTML = letters[0];
-        squaresOfRowFour[0].style.border = "2px solid white";
+        squaresOfRowFour[0].innerHTML = letters[0]; // squaresOfRowFour[0].style.border = "2px solid white";
+
+        squaresOfRowFour[0].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 13:
       if (count3 == 3) {
-        squaresOfRowFour[1].innerHTML = letters[1];
-        squaresOfRowFour[1].style.border = "2px solid white";
+        squaresOfRowFour[1].innerHTML = letters[1]; // squaresOfRowFour[1].style.border = "2px solid white";
+
+        squaresOfRowFour[1].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 14:
       if (count3 == 3) {
-        squaresOfRowFour[2].innerHTML = letters[2];
-        squaresOfRowFour[2].style.border = "2px solid white";
+        squaresOfRowFour[2].innerHTML = letters[2]; // squaresOfRowFour[2].style.border = "2px solid white";
+
+        squaresOfRowFour[2].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 15:
       if (count3 == 3) {
-        squaresOfRowFour[3].innerHTML = letters[3];
-        squaresOfRowFour[3].style.border = "2px solid white";
+        squaresOfRowFour[3].innerHTML = letters[3]; // squaresOfRowFour[3].style.border = "2px solid white";
+
+        squaresOfRowFour[3].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 16:
       if (count3 == 4) {
-        squaresOfRowFive[0].innerHTML = letters[0];
-        squaresOfRowFive[0].style.border = "2px solid white";
+        squaresOfRowFive[0].innerHTML = letters[0]; // squaresOfRowFive[0].style.border = "2px solid white";
+
+        squaresOfRowFive[0].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 17:
       if (count3 == 4) {
-        squaresOfRowFive[1].innerHTML = letters[1];
-        squaresOfRowFive[1].style.border = "2px solid white";
+        squaresOfRowFive[1].innerHTML = letters[1]; // squaresOfRowFive[1].style.border = "2px solid white";
+
+        squaresOfRowFive[1].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 18:
       if (count3 == 4) {
-        squaresOfRowFive[2].innerHTML = letters[2];
-        squaresOfRowFive[2].style.border = "2px solid white";
+        squaresOfRowFive[2].innerHTML = letters[2]; // squaresOfRowFive[2].style.border = "2px solid white";
+
+        squaresOfRowFive[2].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       }
 
       break;
 
     case 19:
-      squaresOfRowFive[3].innerHTML = letters[3];
-      squaresOfRowFive[3].style.border = "2px solid white";
+      squaresOfRowFive[3].innerHTML = letters[3]; // squaresOfRowFive[3].style.border = "2px solid white";
+
+      squaresOfRowFive[3].style = "border: 2px solid white; -webkit-box-shadow: 0px 0px 4px #fff; -moz-box-shadow: 0px 0px 4px #fff; box-shadow: 0px 0px 4px #fff;";
       break;
     // default:
     //   console.log("done");
@@ -234,7 +254,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
   switch (count) {
     case 1:
       squaresOfRowOne[0].innerHTML = "";
-      squaresOfRowOne[0].style.border = "2px solid #a8a7a7";
+      squaresOfRowOne[0].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -242,7 +262,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 2:
       squaresOfRowOne[1].innerHTML = "";
-      squaresOfRowOne[1].style.border = "2px solid #a8a7a7";
+      squaresOfRowOne[1].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -250,7 +270,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 3:
       squaresOfRowOne[2].innerHTML = "";
-      squaresOfRowOne[2].style.border = "2px solid #a8a7a7";
+      squaresOfRowOne[2].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -259,7 +279,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 4:
       squaresOfRowOne[3].innerHTML = "";
-      squaresOfRowOne[3].style.border = "2px solid #a8a7a7";
+      squaresOfRowOne[3].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -269,7 +289,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 5:
       squaresOfRowTwo[0].innerHTML = "";
-      squaresOfRowTwo[0].style.border = "2px solid #a8a7a7";
+      squaresOfRowTwo[0].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -277,7 +297,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 6:
       squaresOfRowTwo[1].innerHTML = "";
-      squaresOfRowTwo[1].style.border = "2px solid #a8a7a7";
+      squaresOfRowTwo[1].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -285,7 +305,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 7:
       squaresOfRowTwo[2].innerHTML = "";
-      squaresOfRowTwo[2].style.border = "2px solid #a8a7a7";
+      squaresOfRowTwo[2].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -293,7 +313,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 8:
       squaresOfRowTwo[3].innerHTML = "";
-      squaresOfRowTwo[3].style.border = "2px solid #a8a7a7";
+      squaresOfRowTwo[3].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -302,7 +322,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 9:
       squaresOfRowThree[0].innerHTML = "";
-      squaresOfRowThree[0].style.border = "2px solid #a8a7a7";
+      squaresOfRowThree[0].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -310,7 +330,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 10:
       squaresOfRowThree[1].innerHTML = "";
-      squaresOfRowThree[1].style.border = "2px solid #a8a7a7";
+      squaresOfRowThree[1].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -318,7 +338,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 11:
       squaresOfRowThree[2].innerHTML = "";
-      squaresOfRowThree[2].style.border = "2px solid #a8a7a7";
+      squaresOfRowThree[2].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -326,7 +346,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 12:
       squaresOfRowThree[3].innerHTML = "";
-      squaresOfRowThree[3].style.border = "2px solid #a8a7a7";
+      squaresOfRowThree[3].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -335,7 +355,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 13:
       squaresOfRowFour[0].innerHTML = "";
-      squaresOfRowFour[0].style.border = "2px solid #a8a7a7";
+      squaresOfRowFour[0].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -343,7 +363,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 14:
       squaresOfRowFour[1].innerHTML = "";
-      squaresOfRowFour[1].style.border = "2px solid #a8a7a7";
+      squaresOfRowFour[1].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -351,7 +371,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 15:
       squaresOfRowFour[2].innerHTML = "";
-      squaresOfRowFour[2].style.border = "2px solid #a8a7a7";
+      squaresOfRowFour[2].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -359,7 +379,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 16:
       squaresOfRowFour[3].innerHTML = "";
-      squaresOfRowFour[3].style.border = "2px solid #a8a7a7";
+      squaresOfRowFour[3].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -368,7 +388,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 17:
       squaresOfRowFive[0].innerHTML = "";
-      squaresOfRowFive[0].style.border = "2px solid #a8a7a7";
+      squaresOfRowFive[0].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -376,7 +396,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 18:
       squaresOfRowFive[1].innerHTML = "";
-      squaresOfRowFive[1].style.border = "2px solid #a8a7a7";
+      squaresOfRowFive[1].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -384,7 +404,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 19:
       squaresOfRowFive[2].innerHTML = "";
-      squaresOfRowFive[2].style.border = "2px solid #a8a7a7";
+      squaresOfRowFive[2].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -392,7 +412,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 20:
       squaresOfRowFive[3].innerHTML = "";
-      squaresOfRowFive[3].style.border = "2px solid #a8a7a7";
+      squaresOfRowFive[3].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
@@ -401,7 +421,7 @@ var deleteDisplayedLetter = function deleteDisplayedLetter() {
 
     case 21:
       squaresOfRowFive[3].innerHTML = "";
-      squaresOfRowFive[3].style.border = "2px solid #a8a7a7";
+      squaresOfRowFive[3].style = "border: 2px solid #a8a7a7 !important";
       letters.pop();
       buttonsClicked.pop();
       count -= 1;
