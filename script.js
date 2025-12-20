@@ -807,3 +807,34 @@ lettersBtn.forEach((button) => {
     counter();
   });
 });
+
+// --- Keyboard support: allow typing letters, Enter and Backspace ---
+// Place this after the lettersBtn.forEach(...) click handler
+document.addEventListener("keydown", (e) => {
+  const key = e.key;
+
+  // Letters A-Z -> simulate clicking the matching on-screen button
+  if (/^[a-zA-Z]$/.test(key)) {
+    const id = key.toLowerCase(); // your on-screen buttons use lowercase ids (e.g. id="a")
+    const btn = document.getElementById(id);
+    if (btn) {
+      // Dispatch a click event so the existing click handler runs (createWord, displayClickedLetter, counter, etc.)
+      btn.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true }));
+    }
+    return;
+  }
+
+  // Enter -> trigger the same logic as clicking the on-screen Enter button
+  if (key === "Enter") {
+    e.preventDefault();
+    if (enterButton) enterButton.click();
+    return;
+  }
+
+  // Backspace -> trigger the same logic as clicking the on-screen backspace button
+  if (key === "Backspace") {
+    e.preventDefault();
+    if (backspaceBtn) backspaceBtn.click();
+    return;
+  }
+});
